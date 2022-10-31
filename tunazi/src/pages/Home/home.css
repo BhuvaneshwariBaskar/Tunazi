@@ -1,0 +1,13 @@
+.homesec{
+    width: 90%;
+    height: 90%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.trending_img{
+    width:70vw;
+    height:40vh;
+    border-radius: 50%;
+}
