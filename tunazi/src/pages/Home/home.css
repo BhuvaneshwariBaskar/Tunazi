@@ -1,13 +1,60 @@
 .homesec{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     position:relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    
 }
 .trending_img{
-    width:70vw;
-    height:40vh;
-    border-radius: 50%;
+    width:90%;
+    height:fit-content;
+    position: relative;
+    background: rgb(23 23 23);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.swiper-pagination-bullet{
+    background: #fff;
+}
+.recently-played{
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Recently-title{
+    font-size:1.9rem;
+    font-weight: 600;
+    color: aliceblue;
+    display: flex;
+    margin-bottom: 3%;
+
+}
+.lang{
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.language-title{
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: aliceblue;
+    display: flex;
+    margin-bottom: 3%;
 }

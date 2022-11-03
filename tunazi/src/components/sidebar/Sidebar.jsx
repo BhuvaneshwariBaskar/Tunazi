@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import SidebarButton from "./SidebarButton";
 import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay } from "react-icons/fa";
+import { FaGripfire } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
 import { AiFillHome} from "react-icons/ai";
 import { FiSearch} from "react-icons/fi";
 // import apiClient from "../../spotify";
@@ -25,9 +24,7 @@ export default function Sidebar() {
       <div>
         <SidebarButton title="Home" to="/" icon={<AiFillHome />} />
         <SidebarButton title="Search" to="/Search" icon={<FiSearch />} />
-        <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
         <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />
-        <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
         <SidebarButton
           title="Favorites"
           to="/favorites"

@@ -12,12 +12,10 @@ import UserRoute from "./routes/User.route";
 
 // Pages
 import Library from "./pages/library/Library";
-import Home from "./pages/Home/home";
+import Home from "./pages/Home/Home";
 import Search from "./pages/search/search";
 import Favorites from "./pages/favorites/Favorites";
-import Feed from "./pages/feed/Feed";
 import Trending from "./pages/trending/trending";
-import Player from "./pages/player/player";
 
 
 function App() {
@@ -50,12 +48,6 @@ function App() {
               </Route>
               <Route path="/" element={<UserRoute />}>
                 <Route path="/Trending" element={<Trending />} />
-              </Route>
-              <Route path="/" element={<UserRoute />}>
-                <Route path="/feed" element={<Feed />} />
-              </Route>
-              <Route path="/" element={<UserRoute />}>
-                <Route path="/player" element={<Player />} />
               </Route>
               <Route path="/" element={<UserRoute />}>
                 <Route path="/favorites" element={<Favorites />} />

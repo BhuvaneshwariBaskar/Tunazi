@@ -1,0 +1,54 @@
+.langcard{
+    width: 13vw;
+    height: 38vh;
+    background-color:#221625 ;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.borderlang{
+    width: 85%;
+    height: 60%;
+    border-radius: 5px;
+    background-color:#cb1af8 ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.langimg{
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.langimg img{
+    width: 10.5vw;
+    height: 14vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.Langname{
+    font-size: 1.2rem;
+    color: aliceblue;  
+}
+.playbtnlang{
+    width: 3vw;
+    height: 6vh;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.3s all ease-in-out;
+}
+.playbtnlang.hide{
+    opacity: 0;
+}

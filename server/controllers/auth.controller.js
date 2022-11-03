@@ -61,8 +61,8 @@ exports.registerPost = async (req, res) => {
                 },
                 process.env.SECRET,
                 {
-                  // expiresIn: 604800,
-                  expiresIn:3000,
+                  expiresIn: 604800,
+                  // expiresIn:3000,
                 }
               );
               return res.json({
