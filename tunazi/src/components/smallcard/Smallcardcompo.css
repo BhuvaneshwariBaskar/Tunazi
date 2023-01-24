@@ -26,6 +26,6 @@
   position: relative;
   /* justify-content: center;
   align-items: center; */
-  gap: 30px;
+  gap: 4rem;
   grid-auto-flow: row;
 }

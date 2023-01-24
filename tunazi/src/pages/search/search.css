@@ -1,0 +1,23 @@
+/* search bar */
+.search-class {
+  width: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.forspan {
+  width: 70%;
+  height: 30vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(244, 187, 146,0.0);
+
+}
+/* .forspan input {
+    width: 
+} */

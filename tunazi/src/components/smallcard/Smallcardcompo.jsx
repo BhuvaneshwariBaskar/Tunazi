@@ -1,5 +1,5 @@
 import React from "react";
-import Smallcard from "../smallcard/Smallcard";
+import Smallcard from "./Smallcard";
 import './Smallcardcompo.css'
 
 const Smallcardcompo = ({ music }) => {

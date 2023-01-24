@@ -1,14 +1,13 @@
-.langcard{
-    width: 10.5vw;
-    height: 28vh;
+.songcard{
+    width: 13vw;
+    height: 38vh;
     background-color:#221625 ;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.flexgive{
+.flex_give{
     width: 90%;
     height: 90%;
     position: relative;
@@ -16,9 +15,9 @@
     justify-content: center;
     align-items: flex-start;
 }
-.borderlang{
-    width: 100%;
-    height: 100%;
+.bordersong{
+    width: 95%;
+    height: 68%;
     border-radius: 5px;
     background-color: #782d8c;
     position: relative;
@@ -27,9 +26,9 @@
     justify-content: flex-start;
     align-items: center;
 }
-.langimg{
+.songimg{
     width: 95%;
-    height: 100%;
+    height: 95%;
     border-radius: 5px;
     position: relative;
     display: flex;
@@ -37,18 +36,28 @@
     justify-content: center;
     align-items: flex-start;
 }
-.langimg img{
-    width: 9vw;
-    height: 17vh;
+.songimg img{
+    width: 10.5vw;
+    height: 14.5vh;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     border-radius: 5px;
 }
-.Langname{
-    font-size: 1.3rem;
+.songname{
+    font-size: 1.2rem;
     color: aliceblue;  
 }
-
+.playbtnsong{
+    width: 3vw;
+    height: 6vh;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.3s all ease-in-out;
+}
+.playbtnsong.hide{
+    opacity: 0;
+}

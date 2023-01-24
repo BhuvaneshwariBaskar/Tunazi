@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, Navigate } from "react-router-dom";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { useLocation, Outlet } from "react-router-dom";
 
 import { validateUser } from "../axios/auth.axios";
@@ -19,14 +19,14 @@ const UserRoute = () => {
         .then((res) => {
           if (!res.data.isLoggedIn) {
             dispatch({ type: "SET_USER", payload: null });
-            toast.success("Please login to continue");
+            // toast.success("Please login to continue");
             navigate("/login");
           }
         })
         .catch((err) => {
           console.log(err);
           dispatch({ type: "SET_USER", payload: null });
-          toast.error("Please login to continue");
+          // toast.error("Please login to continue");
         });
     } else {
       if (location.pathname !== "/login") {
@@ -37,7 +37,7 @@ const UserRoute = () => {
 
   return user && user.token.length ? (
     <>
-      <div className="home">
+      <div className="fstpage">
         <div className="sidebar">
           <Sidebar />
         </div>

@@ -1,33 +1,28 @@
-import React, { useState } from "react";
-import { AiFillPlayCircle } from "react-icons/ai";
+import React from "react";
 import "./langCard.css";
+import { Link } from "react-router-dom";
 
-const LangCard = () => {
-  const [isCardHovered, setIsCardHovered] = useState(false);
+const LangCard = ({lan}) => {
+  console.log(lan,"Language");
   return (
     <section
       className="langcard"
-      onMouseEnter={() => {
-        setIsCardHovered(true);
-      }}
-      onMouseLeave={() => {
-        setIsCardHovered(false);
-      }}
     >
-      <div className="borderlang">
-        <div className="langimg">
-          <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/03/bollywood-songs-1554034044.jpg" alt="" />
-          <p className="Langname">Latest <b>Tamil </b><hr/> songs</p>
-          <AiFillPlayCircle
-            className={`playbtnlang ${!isCardHovered ? "hide" : null}`}
-          />
+      <div className="flexgive">
+        <div className="borderlang">
+          <div className="langimg">
+            <img
+              src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/03/bollywood-songs-1554034044.jpg"
+              alt=""
+            />
+            <Link to="/" className="Langname">
+              Latest <b>{lan}</b> <br />
+              Songs
+            </Link>
+          </div>
         </div>
+        
       </div>
-      {/* <div className="langcontent">
-        <div className="langinnercontent">
-            <p></p>
-        </div>
-      </div> */}
     </section>
   );
 };

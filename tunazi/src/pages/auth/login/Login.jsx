@@ -11,6 +11,7 @@ const Login = () => {
   const dispatch=useDispatch()
   const [mobileno, setMobileno] = useState("");
   const [password, setPassword] = useState("");
+  const [IsAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +19,8 @@ const Login = () => {
       if (res.data && res.data.token) {
         setPassword("");
         setMobileno("");
+    setIsAuthenticated(true);
+
         dispatch({
           type: 'CREATE_USER',
           payload: res.data

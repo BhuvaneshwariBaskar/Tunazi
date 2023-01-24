@@ -13,9 +13,9 @@ import UserRoute from "./routes/User.route";
 // Pages
 import Library from "./pages/library/Library";
 import Home from "./pages/Home/Home";
-import Search from "./pages/search/search";
+import Search from "./pages/search/Search";
 import Favorites from "./pages/favorites/Favorites";
-import Trending from "./pages/trending/trending";
+import Trending from "./pages/trending/Trending";
 
 
 function App() {
@@ -59,10 +59,10 @@ function App() {
           ) : (
             <>
               <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Login />} />
+              <Route path="*" element={<div>404</div>} />
             </>
           )}
-          <Route path="*" element={<div>404</div>} />
         </Routes>
       </div>
     </Router>

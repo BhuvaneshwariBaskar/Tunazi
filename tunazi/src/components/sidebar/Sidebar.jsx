@@ -7,12 +7,21 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { AiFillHome} from "react-icons/ai";
 import { FiSearch} from "react-icons/fi";
+// import {history} from "react-router-dom";
+
 // import apiClient from "../../spotify";
 
 export default function Sidebar() {
   const [image, setImage] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
   );
+  const [IsAuthenticated, setIsAuthenticated] = useState(true);
+
+  const logout = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    setIsAuthenticated(false);
+  };
   // useEffect(() => {
   //   apiClient.get("me").then((response) => {
   //     setImage(response.data.images[0].url);
@@ -24,7 +33,7 @@ export default function Sidebar() {
       <div>
         <SidebarButton title="Home" to="/" icon={<AiFillHome />} />
         <SidebarButton title="Search" to="/Search" icon={<FiSearch />} />
-        <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />
+        {/* <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} /> */}
         <SidebarButton
           title="Favorites"
           to="/favorites"
@@ -32,7 +41,7 @@ export default function Sidebar() {
         />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Sign Out" to="" icon={<FaSignOutAlt />} />
+      <SidebarButton title="Sign Out" onClick={(e)=>logout(e)} to='/login' icon={<FaSignOutAlt />} />
     </div>
   );
 }
