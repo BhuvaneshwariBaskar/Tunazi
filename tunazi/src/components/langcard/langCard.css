@@ -7,7 +7,12 @@
     justify-content: center;
     align-items: center;
 }
-
+.langcard:hover{
+    width: 11vw;
+    height: 29vh;
+    background-color:rgb(36, 36, 36) ;
+    transition: 0.3s all ease-in-out;
+}
 .flexgive{
     width: 90%;
     height: 90%;

@@ -2,9 +2,6 @@
   --blue: #d15de3;
   --bg_black: #fff;
 }
-* {
-  font-family: "Fira Sans", sans-serif;
-}
 .btn {
   padding: 8px 20px;
   border-radius: 20px;
@@ -46,3 +43,5 @@
   background-color: var(--blue);
   color: #000;
 } */
+
+/* Media Query */

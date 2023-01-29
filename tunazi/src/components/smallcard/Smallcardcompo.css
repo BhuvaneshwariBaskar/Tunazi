@@ -1,4 +1,3 @@
-
 .gridcontainer {
   width: 100%;
   height: 100%;
@@ -14,8 +13,8 @@
     "cont3 cont4 cont5";
     justify-content: center;
     align-items: center; */
-    justify-items: center;
-    align-items: center;
+  justify-items: center;
+  align-items: center;
 }
 .grid-item {
   width: 100%;
@@ -28,4 +27,22 @@
   align-items: center; */
   gap: 4rem;
   grid-auto-flow: row;
+}
+/* Media Query */
+@media only screen and (max-width: 1500px) {
+  .grid-item {
+    grid-template-columns: 27rem 27rem;
+    gap: 4.5rem;
+  }
+}
+@media (max-width: 1300px) {
+  .grid-item {
+    gap: 3.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .grid-item {
+    grid-template-columns: 27rem ;
+    gap: 3rem;
+  }
 }

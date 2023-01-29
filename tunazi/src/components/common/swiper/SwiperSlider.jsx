@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "./style.css";
+import "./swiperstyle.css";
 import { Pagination, Autoplay } from "swiper";
 
 const SwiperSlider=({music}) =>{

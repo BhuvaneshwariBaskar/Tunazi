@@ -1,35 +1,36 @@
 import React, { useState } from "react";
 import bg from "../../../assets/images/bglogin.jpg";
 import { login } from "../../../axios/auth.axios";
-import {useDispatch} from 'react-redux';
+import { useDispatch } from "react-redux";
 import "./login.css";
 import Button from "../../../components/common/Button/Button";
-import { toast } from 'react-toastify';
-
+import { toast } from "react-toastify";
 
 const Login = () => {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const [mobileno, setMobileno] = useState("");
   const [password, setPassword] = useState("");
   const [IsAuthenticated, setIsAuthenticated] = useState(false);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(mobileno,password).then((res) => {
+    login(mobileno, password).then((res) => {
       if (res.data && res.data.token) {
         setPassword("");
         setMobileno("");
-    setIsAuthenticated(true);
+        setIsAuthenticated(true);
 
         dispatch({
-          type: 'CREATE_USER',
-          payload: res.data
-        })
-        toast.success("Successfully Login")
+          type: "CREATE_USER",
+          payload: res.data,
+        });
+        toast.success("Successfully Login");
         window.location.href = "/";
       }
     });
   };
+  
   return (
     <div className="bgcolor1">
       <div className="registersec1">

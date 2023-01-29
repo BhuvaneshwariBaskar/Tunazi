@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-import LangCardcompo from "../../components/langcard/Langcardcompo";
+import Lib from "../../components/lib/Lib"
+import {Music} from "../../db/music"
+
 // import { getSadSong, getTrendingSong } from "../../utils/data";
 import "./library.css";
 
-const Library = () => {
-  const lang = ["Hindi","Tamil","English","Telugu","Kannada","Marathi"]
+const Library = ( {Music} ) => {
   return (
     <section className="lib">
-      <div className="lang">
-        <h1 className="language-title">Choose Your Language</h1>
-        <LangCardcompo lang={lang}/>
+      
+      <div>
+        <Lib music={Music}/>
+        
       </div>
     </section>
   )

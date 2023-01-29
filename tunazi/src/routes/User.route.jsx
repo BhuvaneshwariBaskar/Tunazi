@@ -6,6 +6,7 @@ import { useLocation, Outlet } from "react-router-dom";
 
 import { validateUser } from "../axios/auth.axios";
 import Sidebar from "../components/sidebar/Sidebar";
+import Audioplayer from "../components/Audioplayer/Audioplayer";
 
 const UserRoute = () => {
   const { user } = useSelector((state) => ({ ...state }));
@@ -39,15 +40,16 @@ const UserRoute = () => {
     <>
       <div className="fstpage">
         <div className="sidebar">
-          <Sidebar />
+          <Sidebar/>
         </div>
         <div className="outlet">
           <Outlet />
+          <Audioplayer/>
         </div>
       </div>
     </>
   ) : (
-    <Navigate to="login" />
+    <Navigate to="/login" />
   );
 };
 

@@ -1,29 +1,16 @@
-import React from "react";
-import { IconContext } from "react-icons";
-import { FaPause } from "react-icons/fa";
-import { IoPlaySkipBack, IoPlaySkipForward, IoPlay } from "react-icons/io5";
+import React from 'react'
+import AudioPlayer from 'react-h5-audio-player'
+import './audioplayer.css'
 
-const audioplayer = ({ isPlaying, setIsPlaying, handleNext, handlePrev }) => {
+const Audioplayer = () => {
   return (
-    <IconContext.Provider value={{ size: "35px", color: "#C4D0E3" }}>
-      <div className="controls-wrapper flex">
-        <div className="action-btn flex" onClick={handlePrev}>
-          <IoPlaySkipBack />
-        </div>
-        <div
-          className={
-            isPlaying ? "play-pause-btn flex active" : "play-pause-btn flex"
-          }
-          onClick={() => setIsPlaying(!isPlaying)}
-        >
-          {isPlaying ? <FaPause /> : <IoPlay />}
-        </div>
-        <div className="action-btn flex" onClick={handleNext}>
-          <IoPlaySkipForward />
-        </div>
-      </div>
-    </IconContext.Provider>
-  );
-};
+    <AudioPlayer
+    
+    src="https://res.cloudinary.com/deak6nhde/video/upload/v1667737729/Music/Test/01_Bad_Life_-_acoustic.m4a"
+    onPlay={e => console.log("onPlay")}
+    // other props here
+  />
+  )
+}
 
-export default audioplayer;
+export default Audioplayer

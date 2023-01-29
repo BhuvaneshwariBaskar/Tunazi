@@ -59,7 +59,7 @@ function App() {
           ) : (
             <>
               <Route path="/register" element={<Register />} />
-              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
               <Route path="*" element={<div>404</div>} />
             </>
           )}

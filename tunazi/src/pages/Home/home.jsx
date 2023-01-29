@@ -8,7 +8,7 @@ import "swiper/css/bundle";
 import "./home.css";
 
 const Home = ({ music }) => {
-  const lang = ["Hindi","Tamil","English","Telugu","Kannada","Marathi"]
+  // const lang = ["Hindi","Tamil","English","Telugu","Kannada","Marathi"]
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
   const [trendingSong, setTrendingSong] = useState([]);
