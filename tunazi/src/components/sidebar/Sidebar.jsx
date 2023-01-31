@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./sidebar.css";
 import SidebarButton from "./SidebarButton";
 import { MdFavorite } from "react-icons/md";
-// import { FaGripfire } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { AiFillHome } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
-import { useNavigate, Navigate } from "react-router-dom";
 import {addProfile } from "../../axios/user.axios";
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch  } from 'react-redux';
+import { logout } from "../../axios/auth.axios";
+
+
 
 // import apiClient from "../../spotify";
 
 export default function Sidebar() {
   const { user } = useSelector((state) => ({ ...state }));
+  const dispatch = useDispatch();
   const [image, setImage] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
   );
-  // const navigate = useNavigate();
-  // const Logout = () => {
-  //   localStorage.removeItem("token-info");
-  //   navigate("/login");
-  //   // setisloggedIn(false);
-  // };
+  const Logout = (e) => {
+    e.preventDefault();
+        dispatch({
+          type: "LOGOUT_USER",
+        });
+        window.location.href = "/login";
+  };
   const handleSubmit = (e) => {
 		// e.preventDefault();
 
@@ -57,7 +60,7 @@ export default function Sidebar() {
       </div>
       <SidebarButton
         title="Sign Out"
-        // onClick={(e) => Logout()}
+        onClick={Logout}
         icon={<FaSignOutAlt />}
       />
     </div>

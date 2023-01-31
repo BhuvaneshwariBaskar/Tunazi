@@ -6,7 +6,7 @@ const Audioplayer = () => {
   return (
     <AudioPlayer
     
-    src="https://res.cloudinary.com/deak6nhde/video/upload/v1667737729/Music/Test/01_Bad_Life_-_acoustic.m4a"
+    src="https://pwdown.info/14438/01 Chogada - Loveratri.mp3"
     onPlay={e => console.log("onPlay")}
     // other props here
   />

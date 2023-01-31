@@ -15,8 +15,9 @@ exports.profilePicPost = async (req, res) => {
     // }).then(() => {
     //     res.json('ok')
     // })
-    const profilePath = path.join(__dirname, "../profile/"+req.body.userId+"/"+req.file.originalname);
-    res.json(profilePath);
+    // const profilePath = path.join(__dirname, "../profile/"+req.body.userId+"/"+req.file.originalname);
+    const link="http://localhost:8080/uploads/"+req.body.userId+"/"+req.file.originalname;
+    res.json(link);
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error });
