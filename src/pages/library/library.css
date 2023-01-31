@@ -1,0 +1,11 @@
+/* language */
+.lib{
+    width: 100%;
+    min-height: 89vh;
+    max-height: fit-content;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

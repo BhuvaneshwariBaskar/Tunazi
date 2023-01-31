@@ -1,0 +1,17 @@
+.search-played{
+    width: 80%;
+    /* height: fit-content; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.search-title{
+    font-size:2.2rem;
+    font-weight: 600;
+    color: aliceblue;
+    display: flex;
+    margin: 3% 0%;
+
+}

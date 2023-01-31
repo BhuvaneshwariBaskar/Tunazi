@@ -1,0 +1,11 @@
+.outlet {
+    width: calc(100% - 100px);
+    background-color: #111;
+    border-radius: 30px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+  
+  .flex {
+    display: flex;
+  }

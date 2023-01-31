@@ -1,0 +1,91 @@
+.card {
+  width: 23vw;
+  height: 10vh;
+  position: relative;
+  display: flex;
+  background: #221625;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.cardsec {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardsec img {
+  width: 5rem;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+}
+.content {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+}
+.innercontent {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playbutton {
+  width: 3vw;
+  height: 6vh;
+  position: absolute;
+  right: -42px;
+  transition: 0.3s all ease-in-out;
+}
+.playbutton.hide {
+  opacity: 0;
+}
+.title {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: aliceblue;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s all ease-in-out;
+}
+.title.hide {
+  width: 80%;
+}
+/* Media Query */
+@media only screen and (max-width: 1500px) {
+  .card {
+    width: 29vw;
+    height: 10vh;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 33vw;
+    height: 9vh;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 72vw;
+    height: 10vh;
+  }
+  .playbutton {
+    width: 5vw;
+    height: 10vh;
+  }
+  .cardsec img {
+    width: 9rem;
+
+  }
+}

@@ -1,0 +1,19 @@
+@import url('./components/common/globalStyles/globalStyles.css');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+
+}
+/* body{
+  background-color: #000;
+  color:#782d8c;
+} */
+.fstpage {
+  height: 100vh;
+  width: 100vw;
+  background-color: #782d8c;
+  border-radius: 30px;
+  display: flex;
+}

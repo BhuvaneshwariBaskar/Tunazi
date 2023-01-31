@@ -1,0 +1,55 @@
+/* search bar */
+.search-class {
+  width: 100%;
+  min-height:89vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.forspan {
+  width: 80%;
+  height: 5vh;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #221625;
+  border-radius: 40px;
+  padding: 2% 3%;
+
+}
+.forspan input {
+    width: 90vw;
+    height: 5vh;
+    background: #221625;
+    border: none;
+    padding: 2%;
+    color: aliceblue;
+    font-size: 1rem;
+}
+input:focus{
+  outline: none;
+}
+/* Lang Card */
+.lang{
+  width: 80%;
+  /* height: fit-content; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.language-title{
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: aliceblue;
+  display: flex;
+  margin-bottom: 3%;
+}
