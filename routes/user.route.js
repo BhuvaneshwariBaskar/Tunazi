@@ -1,8 +1,8 @@
 
 const express = require('express');
-const {profilePicPost} = require('../controllers/user.controller');
-const {validateUser}=require('../middleware/middleware')
-const {imageUpload}=require('../middleware/multer.middleware')
+const { profilePicPost } = require('../controllers/user.controller');
+const { validateUser } = require('../middleware/middleware')
+const { imageUpload } = require('../middleware/multer.middleware')
 
 const router = express.Router();
 
