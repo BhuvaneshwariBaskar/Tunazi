@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import bg from "../../../assets/images/bglogin.jpg";
 import { register } from "../../../axios/auth.axios";
 import {useDispatch} from 'react-redux';
+import { useNavigate } from "react-router-dom";
+
 
 import "./register.css";
 import Button from "../../../components/common/Button/Button";
@@ -9,6 +11,8 @@ import { toast } from 'react-toastify';
 
 const Register = () => {
   const dispatch=useDispatch()
+  const navigate=useNavigate();
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +32,7 @@ const Register = () => {
           payload: res.data
         })
         toast.success("Account Created Successfully")
-        window.location.href='/'
+        navigate("/register");
       }
     })
   };

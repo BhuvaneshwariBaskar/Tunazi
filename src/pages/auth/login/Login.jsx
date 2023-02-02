@@ -5,13 +5,15 @@ import { useDispatch } from "react-redux";
 import "./login.css";
 import Button from "../../../components/common/Button/Button";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
   const [mobileno, setMobileno] = useState("");
   const [password, setPassword] = useState("");
   const [IsAuthenticated, setIsAuthenticated] = useState(false);
-  
+
+  const navigate=useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,17 +22,17 @@ const Login = () => {
         setPassword("");
         setMobileno("");
         setIsAuthenticated(true);
-
+        
+        toast.success("Successfully Login");
         dispatch({
           type: "CREATE_USER",
           payload: res.data,
         });
-        toast.success("Successfully Login");
-        window.location.href = "/";
+        navigate("/");
       }
     });
   };
-  
+
   return (
     <div className="bgcolor1">
       <div className="registersec1">

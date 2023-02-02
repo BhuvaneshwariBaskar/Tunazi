@@ -9,6 +9,8 @@ import { FiSearch } from "react-icons/fi";
 import {addProfile } from "../../axios/user.axios";
 import { useSelector,useDispatch  } from 'react-redux';
 import { logout } from "../../axios/auth.axios";
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -17,6 +19,8 @@ import { logout } from "../../axios/auth.axios";
 export default function Sidebar() {
   const { user } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
+  const navigate=useNavigate();
+
   const [image, setImage] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
   );
@@ -25,7 +29,7 @@ export default function Sidebar() {
         dispatch({
           type: "LOGOUT_USER",
         });
-        window.location.href = "/login";
+        navigate("/login");
   };
   const handleSubmit = (e) => {
 		// e.preventDefault();
