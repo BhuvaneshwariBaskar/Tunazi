@@ -1,6 +1,7 @@
 import axios from "axios";
-export const addProfile = async (image, token) =>
-  await axios.post(`http://localhost:8000/api/addProfile`, image, {
+export const addProfile = async (formData, token) =>
+
+  await axios.post(`http://localhost:8000/api/addProfile`, formData, {
     headers: { Authorization: `Bearer ${token}` },
   });
 export const happyhits = async () => {
