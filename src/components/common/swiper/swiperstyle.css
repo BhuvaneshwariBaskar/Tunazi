@@ -44,7 +44,7 @@
 }
 .swipersec img {
   width: 22vw;
-  height: 30vh;
+  height: 33vh;
   border-radius: 10px;
 }
 .swipercontent {
@@ -57,7 +57,7 @@
   align-items: flex-start;
 }
 .swipercontent h1 {
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: 300;
   color: #fff;
   margin-bottom: 2%;

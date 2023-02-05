@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app.css";
 import { useSelector } from "react-redux";
@@ -19,6 +19,9 @@ import Trending from "./pages/trending/Trending";
 
 function App() {
   const { user } = useSelector((state) => ({ ...state }));
+	const [cursong, setCursong] = useState("");
+  const [recentlyPlayed, setRecentlyPlayed] = useState([]);
+
   console.log(user);
   return (
     <>
@@ -29,8 +32,8 @@ function App() {
           <Routes>
             {user ? (
               <>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/" element={<Home />} />
+                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed}/>}>
+                  <Route path="/" element={<Home setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed}  />} />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/search" element={<Search />} />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, Navigate } from 'react-router-dom';
 // import { toast } from "react-toastify";
@@ -8,8 +8,9 @@ import { validateUser } from '../axios/auth.axios';
 import Sidebar from '../components/sidebar/Sidebar';
 import Audioplayer from '../components/Audioplayer/Audioplayer';
 
-const UserRoute = () => {
+const UserRoute = ({cursong,recentlyPlayed}) => {
 	const { user } = useSelector((state) => ({ ...state }));
+	
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -43,8 +44,8 @@ const UserRoute = () => {
 					<Sidebar />
 				</div>
 				<div className='outlet'>
-					<Outlet />
-					<Audioplayer />
+					<Outlet recentlyPlayed={recentlyPlayed}/>
+					<Audioplayer cursong={cursong} />
 				</div>
 			</div>
 		</>

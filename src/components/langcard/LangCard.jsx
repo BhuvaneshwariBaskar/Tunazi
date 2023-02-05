@@ -12,11 +12,11 @@ const LangCard = ({lan}) => {
         <div className="borderlang">
           <div className="langimg">
             <img
-              src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/03/bollywood-songs-1554034044.jpg"
+              src={lan.img}
               alt=""
             />
             <Link to="/" className="Langname">
-              Latest <b>{lan}</b> <br />
+              Latest <b>{lan.ln}</b> <br />
               Songs
             </Link>
           </div>
