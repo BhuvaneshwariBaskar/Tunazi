@@ -14,7 +14,7 @@ const UserRoute = ({cursong,recentlyPlayed}) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const location = useLocation();
-	console.log(user);
+	// console.log(user);
 	useEffect(() => {
 		if (user && user.token) {
 			validateUser(user.token)
@@ -45,7 +45,7 @@ const UserRoute = ({cursong,recentlyPlayed}) => {
 				</div>
 				<div className='outlet'>
 					<Outlet recentlyPlayed={recentlyPlayed}/>
-					<Audioplayer cursong={cursong} />
+					<Audioplayer cursong={cursong} user={user} />
 				</div>
 			</div>
 		</>

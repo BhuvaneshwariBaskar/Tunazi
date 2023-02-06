@@ -3,7 +3,6 @@ import "./langCard.css";
 import { Link } from "react-router-dom";
 
 const LangCard = ({lan}) => {
-  console.log(lan,"Language");
   return (
     <section
       className="langcard"

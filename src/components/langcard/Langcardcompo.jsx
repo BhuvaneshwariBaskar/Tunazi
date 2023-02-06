@@ -3,7 +3,7 @@ import LangCard from "./LangCard";
 import './LangCardcompo.css'
 
 const LangCardcompo = ({ lang }) => {
-  console.log(lang,"hello");
+
   return (
     <>
           <div class="grid-items">

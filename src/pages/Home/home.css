@@ -45,6 +45,12 @@
   display: flex;
   margin-bottom: 3%;
 }
+.nohistory{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: aliceblue;
+  display: flex;
+}
 /* Media Query */
 @media (max-width: 1300px) {
   .Recently-title {

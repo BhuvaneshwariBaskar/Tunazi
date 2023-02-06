@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Music } from "../../db/music";
 import "./search.css";
 import { IconContext } from "react-icons";
 import { HiOutlineSearch } from "react-icons/hi";
 import SearchContent from "./SearchContent";
 import LangCardcompo from "../../components/langcard/Langcardcompo";
+import { fetchMusic } from "../../axios/music.axios";
+import { useSelector } from "react-redux";
 
 const Search = () => {
+  const { user } = useSelector((state) => ({ ...state }));
   const lang = [
     {
       ln: "Happy",
@@ -27,7 +29,7 @@ const Search = () => {
     {
       ln: "Motivation",
       img: "https://thumbs.dreamstime.com/b/funny-yellow-emoji-banner-enjoy-every-moment-quote-cry-laughing-yellow-emoticon-banner-illustration-positive-motivation-quote-159875119.jpg",
-    }
+    },
   ];
   const [query, setQuery] = useState("");
   const [savedata, setSavedata] = useState([]);
@@ -36,14 +38,18 @@ const Search = () => {
     setQuery(lowercase);
   };
   useEffect(() => {
-    const data = Music.filter((el) => {
-      if (query === " ") {
-        return el;
-      } else {
-        return el.name.toLowerCase().includes(query);
-      }
+    fetchMusic(user.token).then((res) => {
+      console.log(res, "OKAY");
+      const searchdata = res.data.filter((event) => {
+        if (query === " ") {
+          return " ";
+        } else {
+          return event.title.toLowerCase().includes(query);
+        }
+      });
+      console.log(searchdata);
+      setSavedata(searchdata);
     });
-    setSavedata(data);
   }, [query]);
 
   return (
@@ -63,12 +69,15 @@ const Search = () => {
           autoComplete="off"
         />
       </span>
-      {console.log(savedata)}
-      <div className="lang">
-        <h1 className="language-title">Hey! Search your Favorites Songs</h1>
-        <LangCardcompo lang={lang} />
-      </div>
-      {/* <SearchContent searchtext={query}/> */}
+
+      {query.length == 0 ? (
+        <div className="lang">
+          <h1 className="language-title">Hey! Search your Favorites Songs</h1>
+          <LangCardcompo lang={lang} />
+        </div>
+      ) : (
+        <SearchContent savedata={savedata} />
+      )}
     </div>
   );
 };

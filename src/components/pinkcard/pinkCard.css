@@ -112,3 +112,97 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
+
+
+/* duyfih */
+.pinkcard {
+  width: 23vw;
+  height: 10vh;
+  position: relative;
+  display: flex;
+  background: #221625;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.pinkcardsec {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pinkcardsec img {
+  width: 5rem;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+}
+.pinkcontent {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+}
+.pinkinnercontent {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pinkplaybutton {
+  width: 3vw;
+  height: 6vh;
+  position: absolute;
+  right: -42px;
+  transition: 0.3s all ease-in-out;
+}
+.pinkplaybutton.hide {
+  opacity: 0;
+}
+.pinktitle {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: aliceblue;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s all ease-in-out;
+}
+.pinktitle.hide {
+  width: 80%;
+}
+/* Media Query */
+@media only screen and (max-width: 1500px) {
+  .pinkcard {
+    width: 29vw;
+    height: 10vh;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 33vw;
+    height: 9vh;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 72vw;
+    height: 10vh;
+  }
+  .playbutton {
+    width: 5vw;
+    height: 10vh;
+  }
+  .cardsec img {
+    width: 9rem;
+
+  }
+}

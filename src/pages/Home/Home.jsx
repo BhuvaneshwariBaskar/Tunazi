@@ -1,51 +1,43 @@
 import React, { useState, useEffect } from "react";
-// import Audioplayer from "../../components/Audioplayer/audioplayer";
 import SwiperSlider from "../../components/common/swiper/SwiperSlider";
 import Smallcardcompo from "../../components/smallcard/Smallcardcompo";
-import { Happyhits } from "../../axios/user.axios";
-import { getSadSong} from "../../utils/Data";
+import { fetchMusic } from "../../axios/music.axios";
+import { getHistory } from "../../axios/user.axios";
+// import { getSadSong } from "../../utils/Data";
+import { useSelector } from "react-redux";
+
 import "swiper/css/bundle";
 import "./home.css";
-import PinkCard from "../../components/pinkcard/PinkCard";
 
-const Home = ({setCursong,setRecentlyPlayed}) => {
+const Home = ({ setCursong }) => {
+  const { user } = useSelector((state) => ({ ...state }));
   const [trendingSong, setTrendingSong] = useState(null);
-  
-//  const [data, setData] = useState(null)
- 
-//   useEffect(() => {
-//     const fetchdata = async ()=>{
-//       await happyhits().then((res)=>{
-//         setData(res.data)
-//         console.log(res.data);
-//       }).catch((err)=>{
-//         console.log(err);
-//       })
-//     }
-//     fetchdata();
-//   }, []);
-
+  const [recentlyPlayed, setRecentlyPlayed] = useState(null);
 
   useEffect(() => {
-    getSadSong().then((res) => {
-      console.log(res, "res");
-      setRecentlyPlayed(res);
+    getHistory(user.user_id,user.token).then((res) => {
+      setRecentlyPlayed(res.data);
+      console.log(res.data);
     });
-    Happyhits().then((res) => {
-
-      const data=res.data.filter((event) => event.year === 2022);
-      setTrendingSong(data.slice(2,6));
+    fetchMusic(user.token).then((res) => {
+      const data = res.data.filter((event) => event.year === 2022);
+      setTrendingSong(data.slice(2, 6));
     });
   }, []);
 
   return (
     <section className="homesec">
       <div className="trending_img">
-        {trendingSong && trendingSong ? <SwiperSlider setCursong={setCursong} music={trendingSong} />: null}
+        {trendingSong && trendingSong ? (
+          <SwiperSlider setCursong={setCursong} musics={trendingSong} />
+        ) : null}
       </div>
       <div className="recently-played">
-        <h1 className="Recently-title">Recently Played</h1>
-        <Smallcardcompo music={trendingSong} />
+        { recentlyPlayed && recentlyPlayed ? (
+          <Smallcardcompo music={recentlyPlayed} setCursong={setCursong} />
+        ) : (
+          <h1 className="nohistory"> There is no recently played songs</h1>
+        )}
       </div>
     </section>
   );

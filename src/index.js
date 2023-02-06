@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "./redux/store";
-import AppContextProvider from "./components/context/appContext";
 
 import "./index.css";
 import App from "./App";
@@ -13,9 +12,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <AppContextProvider>
           <App />
-        </AppContextProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>
