@@ -24,7 +24,6 @@ const SwiperSlider = ({ musics, setCursong }) => {
       className="mySwiper"
     >
       {musics.map((music, index) => {
-        // console.log(music)
         return (
           <>
             <SwiperSlide>

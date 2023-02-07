@@ -6,7 +6,7 @@ const LangCardcompo = ({ lang }) => {
 
   return (
     <>
-          <div class="grid-items">
+          <div class="lang-grid-items">
             {lang.map((mus, index) => {
               return <LangCard lan={mus} key={index} />;
             })}

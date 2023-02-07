@@ -22,7 +22,6 @@ function App() {
 	const [cursong, setCursong] = useState("");
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
-  // console.log(user);
   return (
     <>
 

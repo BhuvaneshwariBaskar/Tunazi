@@ -9,7 +9,6 @@ const Audioplayer = ({ cursong, user }) => {
   
   const handlePlay = async () => {
     const history = JSON.parse(user.history);
-    console.log("🚀 ~ file: Audioplayer.jsx:12 ~ handlePlay ~ history", history)
     history.unshift(cursong.music_id);
     await updateHistory(history, user.user_id, user.token).then((res) => {
       dispatch({

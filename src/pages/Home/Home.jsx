@@ -17,7 +17,7 @@ const Home = ({ setCursong }) => {
   useEffect(() => {
     getHistory(user.user_id,user.token).then((res) => {
       setRecentlyPlayed(res.data);
-      console.log(res.data);
+      
     });
     fetchMusic(user.token).then((res) => {
       const data = res.data.filter((event) => event.year === 2022);
@@ -34,7 +34,7 @@ const Home = ({ setCursong }) => {
       </div>
       <div className="recently-played">
         { recentlyPlayed && recentlyPlayed ? (
-          <Smallcardcompo music={recentlyPlayed} setCursong={setCursong} />
+          <Smallcardcompo music={recentlyPlayed} setCursong={setCursong} user={user} />
         ) : (
           <h1 className="nohistory"> There is no recently played songs</h1>
         )}

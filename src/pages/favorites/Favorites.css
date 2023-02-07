@@ -1,0 +1,29 @@
+.Fav-class {
+  width: 100%;
+  min-height: 86vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Fav-title {
+  width: 90%;
+  height: 10vh;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: aliceblue;
+  display: flex;
+  margin: 4% 0%;
+}
+.fav-songs{
+  width: 80%;
+  display: flex;
+}
+.nofav{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: aliceblue;
+  display: flex;
+}

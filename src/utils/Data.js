@@ -8,7 +8,6 @@ import { fetchMusic } from "../axios/user.axios";
 //   const fetchdata = async ()=>{
 //     await happyhits().then((res)=>{
 //       setData(res.data)
-//       console.log(res.data);
 //     }).catch((err)=>{
 //       console.log(err);
 //     })

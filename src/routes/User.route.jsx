@@ -14,28 +14,27 @@ const UserRoute = ({cursong,recentlyPlayed}) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const location = useLocation();
-	// console.log(user);
-	useEffect(() => {
-		if (user && user.token) {
-			validateUser(user.token)
-				.then((res) => {
-					if (!res.data.isLoggedIn) {
-						dispatch({ type: 'SET_USER', payload: null });
-						// toast.success("Please login to continue");
-						navigate('/login');
-					}
-				})
-				.catch((err) => {
-					console.log(err);
-					dispatch({ type: 'SET_USER', payload: null });
-					// toast.error("Please login to continue");
-				});
-		} else {
-			if (location.pathname !== '/login') {
-				navigate('/login');
-			}
-		}
-	}, [dispatch, user, location.pathname, navigate]);
+	// useEffect(() => {
+	// 	if (user && user.token) {
+	// 		validateUser(user.token)
+	// 			.then((res) => {
+	// 				if (!res.data.isLoggedIn) {
+	// 					dispatch({ type: 'SET_USER', payload: null });
+	// 					// toast.success("Please login to continue");
+	// 					navigate('/login');
+	// 				}
+	// 			})
+	// 			.catch((err) => {
+	// 				console.log(err);
+	// 				dispatch({ type: 'SET_USER', payload: null });
+	// 				// toast.error("Please login to continue");
+	// 			});
+	// 	} else {
+	// 		if (location.pathname !== '/login') {
+	// 			navigate('/login');
+	// 		}
+	// 	}
+	// }, [dispatch, user, location.pathname, navigate]);
 
 	return user && user.token && user.token.length ? (
 		<>

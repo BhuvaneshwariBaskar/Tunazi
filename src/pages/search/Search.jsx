@@ -39,7 +39,6 @@ const Search = () => {
   };
   useEffect(() => {
     fetchMusic(user.token).then((res) => {
-      console.log(res, "OKAY");
       const searchdata = res.data.filter((event) => {
         if (query === " ") {
           return " ";
@@ -47,7 +46,6 @@ const Search = () => {
           return event.title.toLowerCase().includes(query);
         }
       });
-      console.log(searchdata);
       setSavedata(searchdata);
     });
   }, [query]);

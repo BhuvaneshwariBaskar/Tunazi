@@ -1,9 +1,9 @@
 import React from "react";
 import PinkCardCompo from "../../components/pinkcard/PinkCardCompo";
 import './SearchContent.css';
-const SearchContent = ({savedata,show}) => {
+const SearchContent = ({savedata}) => {
   return (
-    <div className="search-played" hidden={show}>
+    <div className="search-played" >
       <h1 className="search-title">Search result</h1>
       <PinkCardCompo savedata={savedata} />
     </div>
