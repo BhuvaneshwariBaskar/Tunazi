@@ -2,6 +2,8 @@ const { json } = require("express");
 const path = require("path");
 const db = require("../database");
 
+
+// Profile Pic
 exports.profilePicPost = async (req, res) => {
   try {
     const p =
@@ -46,9 +48,7 @@ exports.profilePicPost = async (req, res) => {
   }
 };
 
-// exports.addToFavorites = async(req,res)={
-//   const {userId}
-// }
+// History
 
 exports.historyPost = async (req, res) => {
   const { history } = req.body;
@@ -78,7 +78,6 @@ exports.historyGet = async (req, res) => {
         return res.status(409).json({ err });
       }
       const history=JSON.parse(result.length&&result[0].history)
-      console.log("🚀 ~ file: user.controller.js:81 ~ history", history)
       await db.query("select * from music_table where music_id IN (?)",[history],
       async(err,result) => {
         if (err) {
@@ -93,19 +92,47 @@ exports.historyGet = async (req, res) => {
   );
 };
 
-// exports.favPost = async (req, res) => {
-//   const { favorites } = req.body;
-//   const { user_id} = req.params;
+// Favorites
 
-//   await db.query(
-//     "UPDATE user_table SET favorites = ? WHERE user_id = ?",
-//     [music_id],
-//     async (err, result) => {
-//       if (err) {
-//         console.log(err);
-//         return res.status(409).json({ err });
-//       }
-//       return res.json("OKAY")
-//     }
-//   );
-// };
+exports.updateFavPost = async (req, res) => {
+  const { favorites } = req.body;
+  const { user_id} = req.params;
+
+  await db.query(
+    "UPDATE user_table SET favorites = ? WHERE user_id = ?",
+    [JSON.stringify(favorites), user_id],
+    async (err, result) => {
+      if (err) {
+        console.log(err);
+        return res.status(409).json({ err });
+      }
+      return res.json("OKAY")
+    }
+  );
+};
+
+exports.getFav=async(req,res)=>{
+  const { user_id} = req.params;
+
+  await db.query(
+    "select favorites from user_table where user_id= ? ",
+    [ user_id],
+    async (err, result) => {      
+      if (err) {
+        console.log(err);
+        return res.status(409).json({ err });
+      }
+      const favorites=JSON.parse(result.length&&result[0].favorites)
+      await db.query("select * from music_table where music_id IN (?)",[favorites],
+      async(err,result) => {
+        if (err) {
+          console.log(err);
+          return res.status(409).json({ err });
+        }
+        return res.json(result)
+
+      }
+      )
+    }
+  ); 
+}

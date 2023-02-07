@@ -1,7 +1,12 @@
 const cloudinary = require("cloudinary");
 const express = require("express");
 const { profilePicPost } = require("../controllers/user.controller");
-const { historyPost,historyGet } = require("../controllers/user.controller");
+const {
+  historyPost,
+  historyGet,
+  updateFavPost,
+  getFav,
+} = require("../controllers/user.controller");
 const { validateUser } = require("../middleware/middleware");
 const { imageUpload } = require("../middleware/multer.middleware");
 
@@ -11,7 +16,14 @@ const db = require("../database");
 router
   .route("/addProfile")
   .post(validateUser, imageUpload.single("image"), profilePicPost);
-router.route("/history/:user_id").post(validateUser, historyPost).get(historyGet)
+router
+  .route("/history/:user_id")
+  .post(validateUser, historyPost)
+  .get(historyGet);
+router
+  .route("/favorites/:user_id")
+  .post(validateUser, updateFavPost)
+  .get(getFav);
 
 cloudinary.config({
   cloud_name: "deak6nhde",

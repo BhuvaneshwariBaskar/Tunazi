@@ -43,8 +43,6 @@ exports.registerPost = async (req, res) => {
               }
 
               const user = results[0];
-              console.log(user);
-              console.log(result);
               //   req.session.user = user;
 
               const token = jwt.sign(
