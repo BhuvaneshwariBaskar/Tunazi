@@ -52,7 +52,7 @@ exports.profilePicPost = async (req, res) => {
 
 exports.historyPost = async (req, res) => {
   const { history } = req.body;
-  const { user_id} = req.params;
+  const { user_id } = req.params;
 
   await db.query(
     "UPDATE user_table SET history = ? WHERE user_id = ?",
@@ -67,26 +67,26 @@ exports.historyPost = async (req, res) => {
   );
 };
 exports.historyGet = async (req, res) => {
-  const { user_id} = req.params;
+  const { user_id } = req.params;
 
   await db.query(
     "select history from user_table where user_id= ? ",
-    [ user_id],
-    async (err, result) => {      
+    [user_id],
+    async (err, result) => {
       if (err) {
         console.log(err);
         return res.status(409).json({ err });
       }
-      const history=JSON.parse(result.length&&result[0].history)
-      await db.query("select * from music_table where music_id IN (?)",[history],
-      async(err,result) => {
-        if (err) {
-          console.log(err);
-          return res.status(409).json({ err });
-        }
-        return res.json(result)
+      const history = JSON.parse(result.length && result[0].history)
+      await db.query("select * from music_table where music_id IN (?)", [history],
+        async (err, result) => {
+          if (err) {
+            console.log(err);
+            return res.status(409).json({ err });
+          }
+          return res.json(result)
 
-      }
+        }
       )
     }
   );
@@ -96,7 +96,7 @@ exports.historyGet = async (req, res) => {
 
 exports.updateFavPost = async (req, res) => {
   const { favorites } = req.body;
-  const { user_id} = req.params;
+  const { user_id } = req.params;
 
   await db.query(
     "UPDATE user_table SET favorites = ? WHERE user_id = ?",
@@ -111,28 +111,28 @@ exports.updateFavPost = async (req, res) => {
   );
 };
 
-exports.getFav=async(req,res)=>{
-  const { user_id} = req.params;
+exports.getFav = async (req, res) => {
+  const { user_id } = req.params;
 
   await db.query(
     "select favorites from user_table where user_id= ? ",
-    [ user_id],
-    async (err, result) => {      
+    [user_id],
+    async (err, result) => {
       if (err) {
         console.log(err);
         return res.status(409).json({ err });
       }
-      const favorites=JSON.parse(result.length&&result[0].favorites)
-      await db.query("select * from music_table where music_id IN (?)",[favorites],
-      async(err,result) => {
-        if (err) {
-          console.log(err);
-          return res.status(409).json({ err });
-        }
-        return res.json(result)
+      const favorites = JSON.parse(result.length && result[0].favorites)
+      await db.query("select * from music_table where music_id IN (?)", [favorites],
+        async (err, result) => {
+          if (err) {
+            console.log(err);
+            return res.status(409).json({ err });
+          }
+          return res.json(result)
 
-      }
+        }
       )
     }
-  ); 
+  );
 }
