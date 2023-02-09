@@ -18,14 +18,15 @@
 .trending_img {
   width: 80%;
   /* height:fit-content; */
-  position:fixed;
-  top:0;
+  position: fixed;
+  top:4rem;
+  z-index:100;
   background: rgb(23 23 23);
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 3% 0%;
+  margin-bottom: 3%;
 }
 .swiper-pagination-bullet {
   background: #fff;
@@ -34,6 +35,8 @@
   width: 90%;
   /* height: fit-content; */
   position: relative;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

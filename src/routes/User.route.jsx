@@ -44,7 +44,7 @@ const UserRoute = ({cursong,recentlyPlayed}) => {
 				</div>
 				<div className='outlet'>
 					<Outlet recentlyPlayed={recentlyPlayed}/>
-					<Audioplayer cursong={cursong} user={user} />
+					<Audioplayer className='audio-player' cursong={cursong} user={user} />
 				</div>
 			</div>
 		</>

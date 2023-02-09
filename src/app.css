@@ -17,3 +17,7 @@
   border-radius: 30px;
   display: flex;
 }
+.audio-player {
+  position: fixed !important;
+  top: 0 !important;
+}
