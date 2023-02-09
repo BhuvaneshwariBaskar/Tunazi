@@ -1,6 +1,6 @@
 .homesec {
   width: 100%;
-  min-height: 86vh;
+  min-height: 82vh;
   max-height: fit-content;
   position: relative;
   display: flex;
@@ -16,15 +16,16 @@
 }
 
 .trending_img {
-  width: 90%;
+  width: 80%;
   /* height:fit-content; */
-  position: relative;
+  position:fixed;
+  top:0;
   background: rgb(23 23 23);
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 3%;
+  margin: 3% 0%;
 }
 .swiper-pagination-bullet {
   background: #fff;

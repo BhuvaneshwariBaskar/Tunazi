@@ -90,7 +90,7 @@
 /* Media Query */
 @media only screen and (max-width: 1500px) {
   .swipercontent h1 {
-    font-size: 4rem;
+    font-size: 1.5rem;
     margin: 2%;
   }
   .swipercontent p {
@@ -103,7 +103,7 @@
 }
 @media (max-width: 1300px) {
   .swipercontent h1 {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     margin: 2%;
   }
   .swipercontent p {
@@ -116,7 +116,7 @@
 }
 @media (max-width: 1100px) {
   .swipercontent h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 2% 4%;
   }
   .swipercontent p {
