@@ -48,6 +48,7 @@ const Search = () => {
       });
       setSavedata(searchdata);
     });
+    
   }, [query]);
 
   return (
