@@ -5,7 +5,7 @@ const {fetchMusic} = require("../controllers/music.controller")
 const router = express.Router();
 
 
-router.route('/music').get(validateUser, fetchMusic)
+router.route('/music').get( fetchMusic)
 
 
 cloudinary.config({
