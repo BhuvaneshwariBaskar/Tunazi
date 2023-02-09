@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./app.css";
 import { useSelector } from "react-redux";
@@ -19,20 +19,20 @@ import Trending from "./pages/trending/Trending";
 
 function App() {
   const { user } = useSelector((state) => ({ ...state }));
-	const [cursong, setCursong] = useState("");
+  const [cursong, setCursong] = useState("");
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
   return (
     <>
 
       <Router>
-      <ToastContainer />
+        <ToastContainer />
         <div className="main-body">
           <Routes>
             {user ? (
               <>
-                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed}/>}>
-                  <Route path="/" element={<Home setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed}  />} />
+                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed} />}>
+                  <Route path="/" element={<Home setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed} />} />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/search" element={<Search />} />
@@ -51,6 +51,7 @@ function App() {
               <>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Login />} />
                 <Route path="*" element={<div>404</div>} />
               </>
             )}
