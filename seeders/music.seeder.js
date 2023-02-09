@@ -28,7 +28,7 @@ var i = 0;
 const insertSeeds = async (j) => {
   const music_id = uniqid();
   await db.query(
-    "INSERT INTO music_table (music_id,title,artist,thumbnail,link,year,created_at) VALUES(?,?,?,?,?,?,?)",
+    "INSERT INTO music_table (music_id,title,artist,thumbnail,link,year,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?)",
     [
       music_id,
       musicSeeds[j].title,
@@ -37,13 +37,14 @@ const insertSeeds = async (j) => {
       musicSeeds[j].link,
       musicSeeds[j].year,
       new Date(),
+      new Date()
     ],
     async (err, result) => {
       if (err) {
         return console.log(err);
-         
+
       }
-      if (musicSeeds.length -1> j) {
+      if (musicSeeds.length - 1 > j) {
         return await insertSeeds(j + 1);
       } else {
         console.log("Music seeded successfully");
