@@ -54,7 +54,7 @@ const Favcard = ({ music, user }) => {
             <IoMdHeartEmpty
               className="fav-Likebutton"
               onClick={() => addToFav(music.music_id)}
-            />
+            />  
           )}
 
           <AiFillPlayCircle className="fav-playbutton" />
