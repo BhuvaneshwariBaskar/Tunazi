@@ -6,9 +6,12 @@ import { updateFavPost } from '../../axios/user.axios';
 import { useDispatch } from 'react-redux';
 import './smallcard.css';
 
-const Smallcard = ({ music, user }) => {
+const Smallcard = ({music,fetchRecentlyPlayed,setCursong,user }) => {
 	const dispatch = useDispatch();
-
+	const handleclick = (data) => {
+		setCursong(data);
+		fetchRecentlyPlayed();
+	};
 	const [isCardHovered, setIsCardHovered] = useState(false);
 	const addToFav = async (music_id) => {
 		const favorites = JSON.parse(user.favorites)
@@ -51,8 +54,9 @@ const Smallcard = ({ music, user }) => {
 						{music.title}
 					</p>
 
-					<AiFillPlayCircle
+					<AiFillPlayCircle type='button' onClick={() => handleclick(music)}
 						className={`playbutton ${!isCardHovered && 'hide'}`}
+						
 					/>
 				</div>
 			</div>

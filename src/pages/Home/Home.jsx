@@ -9,10 +9,10 @@ import { useSelector } from 'react-redux';
 import 'swiper/css/bundle';
 import './home.css';
 
-const Home = ({ setCursong }) => {
+const Home = ({ setCursong, recentlyPlayed,setRecentlyPlayed}) => {
 	const { user } = useSelector((state) => ({ ...state }));
 	const [trendingSong, setTrendingSong] = useState(null);
-	const [recentlyPlayed, setRecentlyPlayed] = useState(null);
+	// const [recentlyPlayed, setRecentlyPlayed] = useState(null);
 
 	const fetchRecentlyPlayed = async () => {
 		getHistory(user.user_id, user.token).then((res) => {

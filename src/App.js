@@ -34,14 +34,14 @@ function App() {
                 <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed} />}>
                   <Route path="/" element={<Home setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed} />} />
                 </Route>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/search" element={<Search />} />
+                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed} />}>
+                  <Route path="/search" element={<Search setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed}/>} />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/Trending" element={<Trending />} />
                 </Route>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/favorites" element={<Favorites />} />
+                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed} />}>
+                  <Route path="/favorites" element={<Favorites setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed}/>} />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/library" element={<Library />} />

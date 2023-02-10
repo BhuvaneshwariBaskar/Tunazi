@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import "./pinkCard.css";
 
-const PinkCard = ({ music }) => {
+const PinkCard = ({ music,setCursong,fetchRecentlyPlayed }) => {
   const [isCardHover, setIsCardHover] = useState(false);
-
+  const handleclick = (data) => {
+		setCursong(data);
+		fetchRecentlyPlayed();
+	};
   return (
     <section
       className="pinkcard"
@@ -23,7 +26,7 @@ const PinkCard = ({ music }) => {
           <p className={`pinktitle ${isCardHover ? "hide" : null}`}>
             {music.title}
           </p>
-          <AiFillPlayCircle
+          <AiFillPlayCircle type='button' onClick={() => handleclick(music)}
             className={`pinkplaybutton ${!isCardHover ? "hide" : null}`}
           />
         </div>
