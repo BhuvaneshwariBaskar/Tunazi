@@ -2,7 +2,6 @@ const { json } = require("express");
 const path = require("path");
 const db = require("../database");
 
-
 // Profile Pic
 exports.profilePicPost = async (req, res) => {
   try {
@@ -62,10 +61,11 @@ exports.historyPost = async (req, res) => {
         console.log(err);
         return res.status(409).json({ err });
       }
-      return res.json("OKAY")
+      return res.json("OKAY");
     }
   );
 };
+
 exports.historyGet = async (req, res) => {
   const { user_id } = req.params;
 
@@ -77,17 +77,18 @@ exports.historyGet = async (req, res) => {
         console.log(err);
         return res.status(409).json({ err });
       }
-      const history = JSON.parse(result.length && result[0].history)
-      await db.query("select * from music_table where music_id IN (?)", [history],
+      const history = JSON.parse(result.length && result[0].history);
+      await db.query(
+        "select * from music_table where music_id IN (?)",
+        [history],
         async (err, result) => {
           if (err) {
             console.log(err);
             return res.status(409).json({ err });
           }
-          return res.json(result)
-
+          return res.json(result);
         }
-      )
+      );
     }
   );
 };
@@ -106,7 +107,7 @@ exports.updateFavPost = async (req, res) => {
         console.log(err);
         return res.status(409).json({ err });
       }
-      return res.json("OKAY")
+      return res.json("OKAY");
     }
   );
 };
@@ -122,17 +123,18 @@ exports.getFav = async (req, res) => {
         console.log(err);
         return res.status(409).json({ err });
       }
-      const favorites = JSON.parse(result.length && result[0].favorites)
-      await db.query("select * from music_table where music_id IN (?)", [favorites],
+      const favorites = JSON.parse(result.length && result[0].favorites);
+      await db.query(
+        "select * from music_table where music_id IN (?)",
+        [favorites],
         async (err, result) => {
           if (err) {
             console.log(err);
             return res.status(409).json({ err });
           }
-          return res.json(result)
-
+          return res.json(result);
         }
-      )
+      );
     }
   );
-}
+};
