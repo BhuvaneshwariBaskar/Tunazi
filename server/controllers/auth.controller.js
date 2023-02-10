@@ -6,7 +6,6 @@ const db = require("../database");
 
 exports.registerPost = async (req, res) => {
   const { username, email, password, mobileno } = req.body;
-  console.log(req.body);
   await db.query(
     "SELECT * FROM user_table WHERE mobileno=?",
     [mobileno],
@@ -17,7 +16,7 @@ exports.registerPost = async (req, res) => {
         });
       const salt = bcrypt.genSaltSync(10);
       const hash = bcrypt.hashSync(password, salt);
-      const id =uniqid()
+      const id = uniqid()
       await db.query(
         "INSERT INTO user_table (user_id, username,email,password,mobileno,created_at) VALUES(?,?,?,?,?,?)",
         [id, username, email, hash, mobileno, new Date()],
@@ -31,7 +30,7 @@ exports.registerPost = async (req, res) => {
           //   return res.status(200).json({
           //     message: "Account created successfully",
           //   });
-          
+
           await db.query(
             "SELECT * FROM user_table WHERE user_id =?",
             [id],
@@ -44,8 +43,6 @@ exports.registerPost = async (req, res) => {
               }
 
               const user = results[0];
-              console.log(user);
-              console.log(result);
               //   req.session.user = user;
 
               const token = jwt.sign(
@@ -67,7 +64,7 @@ exports.registerPost = async (req, res) => {
               );
               return res.json({
                 token: token,
-                user: user,
+                ...user,
               });
             }
           );
@@ -129,9 +126,8 @@ exports.loginPost = async (req, res) => {
             }
           );
           return res.json({
-            isloggedIn: true,
             token: token,
-            user: user,
+            ...user,
           });
         }
       );

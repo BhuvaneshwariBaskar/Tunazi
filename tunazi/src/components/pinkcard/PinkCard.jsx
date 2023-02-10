@@ -3,18 +3,30 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import "./pinkCard.css";
 
 const PinkCard = ({ music }) => {
+  const [isCardHover, setIsCardHover] = useState(false);
+
   return (
-    <section class="cardclass">
-      <img src={music.img} class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <AiFillPlayCircle />
-          <div class="card__header-text">
-            <h3 class="card__title">{music.name}</h3>
-            <span class="card__status">{music.author_name}</span>
-          </div>
+    <section
+      className="pinkcard"
+      onMouseEnter={() => {
+        setIsCardHover(true);
+      }}
+      onMouseLeave={() => {
+        setIsCardHover(false);
+      }}
+    >
+      <div className="pinkcardsec">
+        <img src={music.thumbnail} alt="" />
+      </div>
+      <div className="pinkcontent">
+        <div className="pinkinnercontent">
+          <p className={`pinktitle ${isCardHover ? "hide" : null}`}>
+            {music.title}
+          </p>
+          <AiFillPlayCircle
+            className={`pinkplaybutton ${!isCardHover ? "hide" : null}`}
+          />
         </div>
-        <p class="card__description">{music.desc}</p>
       </div>
     </section>
   );

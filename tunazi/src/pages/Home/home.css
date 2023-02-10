@@ -1,6 +1,6 @@
 .homesec {
   width: 100%;
-  min-height: 89vh;
+  min-height: 82vh;
   max-height: fit-content;
   position: relative;
   display: flex;
@@ -16,9 +16,11 @@
 }
 
 .trending_img {
-  width: 90%;
+  width: 80%;
   /* height:fit-content; */
-  position: relative;
+  position: fixed;
+  top:4rem;
+  z-index:100;
   background: rgb(23 23 23);
   border-radius: 10px;
   display: flex;
@@ -33,6 +35,8 @@
   width: 90%;
   /* height: fit-content; */
   position: relative;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +48,12 @@
   color: aliceblue;
   display: flex;
   margin-bottom: 3%;
+}
+.nohistory{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: aliceblue;
+  display: flex;
 }
 /* Media Query */
 @media (max-width: 1300px) {

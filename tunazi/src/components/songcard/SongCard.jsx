@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import "./songCard.css";
+import "./Songcard.css";
 
 const LangCard = () => {
   const [isCardHovered, setIsCardHovered] = useState(false);

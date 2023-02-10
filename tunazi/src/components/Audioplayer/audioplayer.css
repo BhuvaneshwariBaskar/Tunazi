@@ -1,13 +1,37 @@
+/* audio name */
+.audiocon{
+  width:100%;
+ display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center; 
+}
+.imgname{
+  width:30%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.cursongimage{
+  width:30%;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .rhap_container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   line-height: 1;
   font-family: inherit;
-  width: 100%;
-  padding: 15px 15px;
+  width: 70%;
+  padding: 20px 15px;
   background-color: rgb(36, 36, 36);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
 }
 .rhap_container:focus:not(:focus-visible) {
   outline: 0;

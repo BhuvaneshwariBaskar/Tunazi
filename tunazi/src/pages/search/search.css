@@ -1,7 +1,7 @@
 /* search bar */
 .search-class {
   width: 100%;
-  min-height:89vh;
+  min-height:86vh;
   max-height: fit-content;
   display: flex;
   flex-direction: column;

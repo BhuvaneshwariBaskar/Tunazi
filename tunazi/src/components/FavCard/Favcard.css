@@ -1,0 +1,85 @@
+.fav-card {
+  width: 70vw;
+  height: 11vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: #221625;
+  border-radius: 10px;
+}
+.fav-cardsec {
+  width: 15%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fav-cardsec img {
+  width: 8rem;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+}
+.fav-content {
+  width: 95%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.fav-innercontent {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.favtext {
+  width: 70%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fav-title {
+  width: 100%;
+  font-size:1.6rem;
+  font-weight: 300;
+  color: rgba(240, 248, 255, 0.936);
+  margin:1% 0%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fav-artist {
+    width: 100%;
+    font-size:1rem;
+    font-weight: lighter;
+    color: rgba(240, 248, 255, 0.39);
+    margin:1% 0%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+.fav-playbutton {
+  width: 2.8rem;
+  height: 2.8rem;
+  position: absolute;
+  right: -42px;
+  color: #782d8c;
+}
+
+.fav-Likebutton {
+  width: 2.8rem;
+  height: 2.8rem;
+  position: absolute;
+  right: 40px;
+  color: #782d8c;
+}

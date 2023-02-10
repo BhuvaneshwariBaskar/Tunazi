@@ -1,0 +1,25 @@
+{
+  "name": "tunazi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "git-client": "cd tunazi && git add . && git commit -m Changes && git push origin client && cd ..",
+    "git-server": "cd server && git add . && git commit -m Changes && git push origin server && cd ..",
+    "git": "npm run git-client && npm run git-server",
+    "git-client-pull": "cd tunazi && git add . && git commit -m Changes && git pull origin client && cd ..",
+    "git-server-pull": "cd server && git add . && git commit -m Changes && git pull origin server && cd ..",
+    "git-pull": "npm run git-client-pull && npm run git-server-pull"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhuvaneshwariBaskar/Tunazi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhuvaneshwariBaskar/Tunazi/issues"
+  },
+  "homepage": "https://github.com/BhuvaneshwariBaskar/Tunazi#readme"
+}

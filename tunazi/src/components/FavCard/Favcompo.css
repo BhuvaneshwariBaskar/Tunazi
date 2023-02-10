@@ -1,0 +1,11 @@
+
+  .fav-grid-item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 80rem ;
+    position: relative;
+
+    row-gap: 3rem;
+    grid-auto-flow: row;
+  }
