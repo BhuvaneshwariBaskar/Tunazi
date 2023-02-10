@@ -6,8 +6,9 @@ import SearchContent from "./SearchContent";
 import LangCardcompo from "../../components/langcard/Langcardcompo";
 import { fetchMusic } from "../../axios/music.axios";
 import { useSelector } from "react-redux";
+import { getHistory } from "../../axios/user.axios";
 
-const Search = () => {
+const Search = ({ setCursong, setRecentlyPlayed }) => {
   const { user } = useSelector((state) => ({ ...state }));
   const lang = [
     {
@@ -37,7 +38,14 @@ const Search = () => {
     const lowercase = e.target.value.toLowerCase();
     setQuery(lowercase);
   };
+
+  const fetchRecentlyPlayed = async () => {
+    getHistory(user.user_id, user.token).then((res) => {
+      setRecentlyPlayed(res.data);
+    });
+  };
   useEffect(() => {
+    fetchRecentlyPlayed();
     fetchMusic(user.token).then((res) => {
       const searchdata = res.data.filter((event) => {
         if (query === " ") {
@@ -48,7 +56,6 @@ const Search = () => {
       });
       setSavedata(searchdata);
     });
-    
   }, [query]);
 
   return (
@@ -75,7 +82,13 @@ const Search = () => {
           <LangCardcompo lang={lang} />
         </div>
       ) : (
-        <SearchContent savedata={savedata} />
+        <SearchContent
+          savedata={savedata}
+          fetchRecentlyPlayed={fetchRecentlyPlayed}
+          setRecentlyPlayed={setRecentlyPlayed}
+          setCursong={setCursong}
+          user={user}
+        />
       )}
     </div>
   );

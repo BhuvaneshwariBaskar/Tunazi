@@ -1,5 +1,5 @@
 import axios from "axios";
-import {base_url} from "../utils/constants.util"
+import { base_url } from "../utils/constants.util";
 
 export const addProfile = async (formData, token) =>
   await axios.post(`${base_url}/addProfile`, formData, {

@@ -9,6 +9,7 @@ import Login from "./pages/auth/login/Login";
 import UserRoute from "./routes/User.route";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getHistory } from "./axios/user.axios";
 
 // Pages
 import Library from "./pages/library/Library";
@@ -22,26 +23,72 @@ function App() {
   const [cursong, setCursong] = useState("");
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
+  const fetchRecentlyPlayed = async () => {
+    getHistory(user.user_id, user.token).then((res) => {
+      setRecentlyPlayed(res.data);
+    });
+  };
+
   return (
     <>
-
       <Router>
         <ToastContainer />
         <div className="main-body">
           <Routes>
             {user ? (
               <>
-                <Route path="/" element={<UserRoute cursong={cursong} recentlyPlayed={recentlyPlayed} />}>
-                  <Route path="/" element={<Home setCursong={setCursong} setRecentlyPlayed={setRecentlyPlayed} />} />
+                <Route path="/" element={<UserRoute cursong={cursong} />}>
+                  <Route
+                    path="/"
+                    element={
+                      <Home
+                        setCursong={setCursong}
+                        fetchRecentlyPlayed={fetchRecentlyPlayed}
+                        recentlyPlayed={recentlyPlayed}
+                      />
+                    }
+                  />
                 </Route>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/search" element={<Search />} />
+                <Route
+                  path="/"
+                  element={
+                    <UserRoute
+                      cursong={cursong}
+                      recentlyPlayed={recentlyPlayed}
+                    />
+                  }
+                >
+                  <Route
+                    path="/search"
+                    element={
+                      <Search
+                        setCursong={setCursong}
+                        setRecentlyPlayed={setRecentlyPlayed}
+                      />
+                    }
+                  />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/Trending" element={<Trending />} />
                 </Route>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/favorites" element={<Favorites />} />
+                <Route
+                  path="/"
+                  element={
+                    <UserRoute
+                      cursong={cursong}
+                      recentlyPlayed={recentlyPlayed}
+                    />
+                  }
+                >
+                  <Route
+                    path="/favorites"
+                    element={
+                      <Favorites
+                        setCursong={setCursong}
+                        setRecentlyPlayed={setRecentlyPlayed}
+                      />
+                    }
+                  />
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/library" element={<Library />} />
