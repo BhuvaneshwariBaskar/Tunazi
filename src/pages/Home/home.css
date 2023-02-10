@@ -27,6 +27,8 @@
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
+  padding-top: 5rem;
+  top: 0;
 }
 .swiper-pagination-bullet {
   background: #fff;
@@ -35,7 +37,7 @@
   width: 90%;
   /* height: fit-content; */
   position: relative;
-  padding-top: 23rem;
+  padding-top: 20rem;
   padding-bottom: 5rem;
   display: flex;
   flex-direction: column;

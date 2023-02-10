@@ -44,6 +44,7 @@
   position: absolute;
   right: -42px;
   transition: 0.3s all ease-in-out;
+  color: white;
 }
 .playbutton.hide {
   opacity: 0;
