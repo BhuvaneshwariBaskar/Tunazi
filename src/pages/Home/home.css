@@ -18,7 +18,7 @@
 .trending_img {
   width: 80%;
   /* height:fit-content; */
-  position: fixed;
+  /* position: fixed; */
   top:4rem;
   z-index:100;
   background: rgb(23 23 23);
