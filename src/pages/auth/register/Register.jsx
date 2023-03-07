@@ -20,7 +20,7 @@ const Register = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		await register(username, email, password, mobileno).then((res) => {
-			
+			console.log(res);
 			if (res.data && res.data.token) {
 				setUsername('');
 				setEmail('');

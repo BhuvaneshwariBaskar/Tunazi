@@ -1,7 +1,7 @@
 /* search bar */
 .search-class {
   width: 100%;
-  min-height:86vh;
+  min-height: 86vh;
   max-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -16,25 +16,24 @@
   position: relative;
   justify-content: flex-start;
   align-items: center;
-  background-color: #221625;
+  background-color: #782d8c;
   border-radius: 40px;
   padding: 2% 3%;
-
 }
 .forspan input {
-    width: 90vw;
-    height: 5vh;
-    background: #221625;
-    border: none;
-    padding: 2%;
-    color: aliceblue;
-    font-size: 1rem;
+  width: 90vw;
+  height: 5vh;
+  background: #782d8c;
+  border: none;
+  padding: 2%;
+  color: aliceblue;
+  font-size: 1rem;
 }
-input:focus{
+input:focus {
   outline: none;
 }
 /* Lang Card */
-.lang{
+.lang {
   width: 80%;
   /* height: fit-content; */
   position: relative;
@@ -46,7 +45,7 @@ input:focus{
   margin-bottom: 3%;
 }
 
-.language-title{
+.language-title {
   font-size: 1.9rem;
   font-weight: 600;
   color: aliceblue;

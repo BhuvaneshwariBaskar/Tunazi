@@ -5,7 +5,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  background: #221625;
+  background: #782d8c;
   border-radius: 10px;
 }
 .fav-cardsec {
@@ -48,26 +48,26 @@
 }
 .fav-title {
   width: 100%;
-  font-size:1.6rem;
+  font-size: 1.6rem;
   font-weight: 300;
   color: rgba(240, 248, 255, 0.936);
-  margin:1% 0%;
+  margin: 1% 0%;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .fav-artist {
-    width: 100%;
-    font-size:1rem;
-    font-weight: lighter;
-    color: rgba(240, 248, 255, 0.39);
-    margin:1% 0%;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  width: 100%;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: rgba(240, 248, 255, 0.39);
+  margin: 1% 0%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .fav-playbutton {
   width: 2.8rem;
   height: 2.8rem;
@@ -77,9 +77,9 @@
 }
 
 .fav-Likebutton {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.6rem;
+  height: 2.6rem;
   position: absolute;
-  right: 40px;
-  color: #782d8c;
+  right: 0px;
+  color: white;
 }

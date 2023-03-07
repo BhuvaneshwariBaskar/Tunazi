@@ -1,64 +1,64 @@
 /* Song card */
-.songcard{
-    width: 13vw;
-    height: 38vh;
-    background-color:#221625 ;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.songcard {
+  width: 13vw;
+  height: 38vh;
+  background-color: #782d8c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.flex_give{
-    width: 90%;
-    height: 90%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.flex_give {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.bordersong{
-    width: 95%;
-    height: 68%;
-    border-radius: 5px;
-    background-color: #782d8c;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.bordersong {
+  width: 95%;
+  height: 68%;
+  border-radius: 5px;
+  background-color: #782d8c;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-.songimg{
-    width: 95%;
-    height: 95%;
-    border-radius: 5px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.songimg {
+  width: 95%;
+  height: 95%;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
-.songimg img{
-    width: 10.5vw;
-    height: 14.5vh;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-    border-radius: 5px;
+.songimg img {
+  width: 10.5vw;
+  height: 14.5vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 5px;
 }
-.songname{
-    font-size: 1.2rem;
-    color: aliceblue;  
+.songname {
+  font-size: 1.2rem;
+  color: aliceblue;
 }
-.playbtnsong{
-    width: 3vw;
-    height: 6vh;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    transition: 0.3s all ease-in-out;
+.playbtnsong {
+  width: 3vw;
+  height: 6vh;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  transition: 0.3s all ease-in-out;
 }
-.playbtnsong.hide{
-    opacity: 0;
+.playbtnsong.hide {
+  opacity: 0;
 }

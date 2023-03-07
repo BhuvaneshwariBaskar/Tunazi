@@ -3,7 +3,7 @@
   height: 10vh;
   position: relative;
   display: flex;
-  background: #221625;
+  background: #782d8c;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -44,15 +44,19 @@
   position: absolute;
   right: -42px;
   transition: 0.3s all ease-in-out;
+  color: white;
 }
 .playbutton.hide {
+  opacity: 0;
+}
+.Likebutton.hide {
   opacity: 0;
 }
 .Likebutton {
   width: 1.8rem;
   height: 1.8rem;
   position: absolute;
-  right:4px;
+  right: 4px;
   color: #782d8c;
 }
 .title {
@@ -93,6 +97,5 @@
   }
   .cardsec img {
     width: 9rem;
-
   }
 }

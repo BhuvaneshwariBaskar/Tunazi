@@ -1,59 +1,58 @@
-.langcard{
-    width: 10.5vw;
-    height: 28vh;
-    background-color:#221625 ;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.langcard {
+  width: 10.5vw;
+  height: 28vh;
+  background-color: #782d8c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.langcard:hover{
-    width: 11vw;
-    height: 29vh;
-    background-color:rgb(36, 36, 36) ;
-    transition: 0.3s all ease-in-out;
+.langcard:hover {
+  width: 11vw;
+  height: 29vh;
+  background-color: rgb(36, 36, 36);
+  transition: 0.3s all ease-in-out;
 }
-.flexgive{
-    width: 90%;
-    height: 90%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.flexgive {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.borderlang{
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: #782d8c;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.borderlang {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #782d8c;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-.langimg{
-    width: 95%;
-    height: 100%;
-    border-radius: 5px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.langimg {
+  width: 95%;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
-.langimg img{
-    width: 9vw;
-    height: 17vh;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4%;
-    border-radius: 5px;
+.langimg img {
+  width: 9vw;
+  height: 17vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  border-radius: 5px;
 }
-.Langname{
-    font-size: 1.1rem;
-    color: aliceblue;  
+.Langname {
+  font-size: 1.1rem;
+  color: aliceblue;
 }
-

@@ -1,5 +1,5 @@
 import axios from "axios";
-import {base_url} from "../utils/constants.util"
+import { base_url } from "../utils/constants.util";
 
 export const addProfile = async (formData, token) =>
   await axios.post(`${base_url}/addProfile`, formData, {
@@ -30,3 +30,6 @@ export const getFav = async (user_id, token) =>
   await axios.get(`${base_url}/favorites/${user_id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
+  export const Hello= async()=>{
+    return await axios.get(`${base_url}/hi`)
+  }
