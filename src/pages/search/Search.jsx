@@ -69,7 +69,7 @@ const Search = () => {
         />
       </span>
 
-      {query.length == 0 ? (
+      {query.length === 0 ? (
         <div className="lang">
           <h1 className="language-title">Hey! Search your Favorites Songs</h1>
           <LangCardcompo lang={lang} />
