@@ -12,4 +12,9 @@
     align-items: center;
     grid-auto-flow: row;
   }
-  
+  @media screen and (max-width:500px) {
+    .lang-grid-items{
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }

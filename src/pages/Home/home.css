@@ -19,7 +19,6 @@
   width: 80%;
   /* height:fit-content; */
   position: fixed;
-  top: 4rem;
   z-index: 100;
   background: rgb(23 23 23);
   border-radius: 10px;
@@ -27,7 +26,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
   top: 0;
 }
 .swiper-pagination-bullet {
@@ -37,7 +36,7 @@
   width: 90%;
   /* height: fit-content; */
   position: relative;
-  padding-top: 20rem;
+  padding-top: 22rem;
   padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
@@ -72,4 +71,20 @@
     font-size: 2rem;
     margin-bottom: 5%;
   }
+}
+@media (max-width: 700px) {
+  .trending_img {
+    padding: 1rem;
+    width: 70%;
+  }
+  .recently-played{
+    padding-top: 15rem;
+  }
+}
+@media (max-width: 600px) {
+  .Recently-title {
+    font-size: 1.8rem;
+    margin-bottom: 6%;
+  }
+ 
 }

@@ -86,7 +86,7 @@
     height: 9vh;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .card {
     width: 72vw;
     height: 10vh;
@@ -97,5 +97,10 @@
   }
   .cardsec img {
     width: 9rem;
+  }
+  .Likebutton {
+    width: 1.8rem;
+    height: 1.8rem;
+    right: 4px;
   }
 }

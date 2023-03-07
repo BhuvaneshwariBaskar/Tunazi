@@ -87,6 +87,7 @@ function App() {
                     path="/favorites"
                     element={
                       <Favorites
+                        fetchRecentlyPlayed={fetchRecentlyPlayed}
                         setCursong={setCursong}
                         setRecentlyPlayed={setRecentlyPlayed}
                       />

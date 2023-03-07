@@ -14,7 +14,7 @@ const LangCard = ({lan}) => {
               src={lan.img}
               alt=""
             />
-            <Link to="/" className="Langname">
+            <Link to="/favorites" className="Langname">
               Latest <b>{lan.ln}</b> <br />
               Songs
             </Link>

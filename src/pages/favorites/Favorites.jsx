@@ -4,7 +4,7 @@ import Favcompo from "../../components/FavCard/Favcompo";
 import { useSelector } from "react-redux";
 import { getFav } from "../../axios/user.axios";
 
-const Favorites = () => {
+const Favorites = ({ setCursong, fetchRecentlyPlayed }) => {
   const { user } = useSelector((state) => ({ ...state }));
   const [favPlayed, setFavPlayed] = useState(null);
   useEffect(() => {
@@ -18,7 +18,12 @@ const Favorites = () => {
       <h1 className="Fav-title">Your Favorites</h1>
       <div className="fav-songs">
         {favPlayed && favPlayed ? (
-          <Favcompo music={favPlayed} user={user} />
+          <Favcompo
+            music={favPlayed}
+            user={user}
+            fetchRecentlyPlayed={fetchRecentlyPlayed}
+            setCursong={setCursong}
+          />
         ) : (
           <h1 className="nofav"> Start to like your favorite songs!!!</h1>
         )}
