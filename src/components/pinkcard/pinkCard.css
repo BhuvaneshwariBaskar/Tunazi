@@ -160,7 +160,11 @@
   position: absolute;
   right: -42px;
   transition: 0.3s all ease-in-out;
+<<<<<<< HEAD
   color: white;
+=======
+  color:white;
+>>>>>>> 371c386f08da62b67ad95f7638fb6cd7ca530407
 }
 .pinkplaybutton.hide {
   opacity: 0;

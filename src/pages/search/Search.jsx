@@ -51,7 +51,7 @@ const Search = ({ setCursong, setRecentlyPlayed }) => {
         if (query === " ") {
           return " ";
         } else {
-          return event.title.toLowerCase().includes(query);
+          return event.title.toLowerCase().startsWith(query);
         }
       });
       setSavedata(searchdata);
