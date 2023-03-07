@@ -87,3 +87,30 @@ h1 {
   position: relative;
   border-radius: 10px;
 }
+@media only screen and (max-width: 800px){
+  .registersec1 > img {
+    display:none
+  }
+  .left1 {
+    width: 90%;
+  }
+  #form1 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px){
+  .registersec1 {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 350px){
+  .registersec1 {
+    width: 90%;
+  }
+  .leftsec1 {
+    height: 75%;
+  }
+  .email1 > input {
+    width: 90%;
+  }
+}

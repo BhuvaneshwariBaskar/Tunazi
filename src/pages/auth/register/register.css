@@ -66,7 +66,7 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   align-items: center;
   justify-content: center;
 }
@@ -76,8 +76,9 @@ h1 {
     color: #000;
 }
 .email > input {
-  width: 75%;
+  width: 70%;
   height: 3.1rem;
+  padding: 8px;
   position: relative;
   border: 1.5px solid #000;
   border-radius: 20px;
@@ -93,3 +94,54 @@ h1 {
   position: relative;
   border-radius:10px;
 }
+@media screen  and (max-width:1000px){
+  .registersec >img {
+    display: none;
+  }
+  .registersec {
+    width: 60%;
+    height: 75%;
+  }
+  .email > input {
+    width: 100%;
+  }
+  .left {
+    width: 70%;
+  }
+}
+@media screen  and (max-width:600px){
+  .registersec {
+    height: 68%;
+  }
+}
+@media screen  and (max-width:500px){
+  .registersec {
+    height: 68%;
+    width: 75%;
+  }
+  .email > input {
+    padding: 7px;
+  }
+}
+@media screen  and (max-width:400px){
+  .registersec {
+    height: 65%;
+    width: 85%;
+  }
+  
+  .email > input {
+    padding: 7px;
+  }
+  #form >p{
+    font-size: 0.8rem;
+}
+}
+@media screen  and (max-width:350px){
+  .registersec {
+    height: 60%;
+  }
+  .email > input {
+    padding: 5px;
+  }
+}
+

@@ -17,7 +17,7 @@ const Home = ({ setCursong, recentlyPlayed, fetchRecentlyPlayed }) => {
     fetchRecentlyPlayed();
     fetchMusic(user.token).then((res) => {
       const data = res.data.filter((event) => event.year === 2022);
-      setTrendingSong(data.slice(1, 8));
+      setTrendingSong(data.slice(1, 5));
      
     });
   }, []);
