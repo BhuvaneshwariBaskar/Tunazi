@@ -11,11 +11,11 @@
 
 .container-playlist .libcard {
   position: relative;
-  max-width: 300px;
-  height: 265px;
+  max-width: 200px;
+  height: 160px;
   background-color: #fff;
   margin: 30px 10px;
-  padding: 20px 15px;
+  padding: 9px 15px;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   border-radius: 15px;
 }
 .container-playlist .libcard:hover {
-  height: 320px;
+  height: 200px;
 }
 
 .container-playlist .libcard.playlistimage{
@@ -45,8 +45,8 @@
 
 .container-playlist .libcard .playlistcontent {
   position: relative;
-  top: -140px;
-  padding: 10px 15px;
+  top: -22px;
+  /* padding: 10px 15px; */
   color: #111;
   text-align: center;
 

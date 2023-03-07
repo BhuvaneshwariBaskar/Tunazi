@@ -11,7 +11,6 @@ const Lib=({music})=>{
           </div>
           <div className = "playlistcontent">
         <h3>This is content</h3>
-        <p>DIn publishing and graphic design,Lorem ipsum is a placeholder text commonly used to demonstrate the visualform of a document or a typeface without relying on meaningful content.</p>
       </div>
         </div>
       </div>
