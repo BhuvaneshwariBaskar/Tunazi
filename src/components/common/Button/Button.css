@@ -45,3 +45,9 @@
 } */
 
 /* Media Query */
+
+@media screen  and (max-width:500px) {
+  .btn--medium {
+    padding: 8px 40px;
+  }
+}
