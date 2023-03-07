@@ -24,6 +24,10 @@ router
   .route("/favorites/:user_id")
   .post(validateUser, updateFavPost)
   .get(getFav);
+router.get("/hi",
+  (req, res) => {
+    res.json("Hi");
+  });
 
 cloudinary.config({
   cloud_name: "deak6nhde",

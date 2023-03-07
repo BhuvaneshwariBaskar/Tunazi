@@ -106,7 +106,7 @@ exports.loginPost = async (req, res) => {
           const user = results[0];
           if (!bcrypt.compareSync(password, user.password)) {
             return res.status(401).json({
-              error: "Invalid email or password",
+              error: "Invalid password",
             });
           }
           const token = jwt.sign(

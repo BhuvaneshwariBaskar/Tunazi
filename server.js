@@ -26,9 +26,11 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use("/api", express.static("uploads"));
 app.use("/api", authRoute);
+// app.use("/", authRoute);
+
 app.use("/api", userRoute);
 app.use("/api", musicRoute);
-
+// res.send("HELLO")
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on port ${process.env.PORT}`);
 });

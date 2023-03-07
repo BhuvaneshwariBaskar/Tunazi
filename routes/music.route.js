@@ -2,10 +2,15 @@ const cloudinary = require("cloudinary");
 const express = require('express');
 const { validateUser } = require('../middleware/middleware')
 const {fetchMusic} = require("../controllers/music.controller")
+// const {fetchMusicName} = require("../controllers/music.controller")
+
 const router = express.Router();
 
 
 router.route('/music').get( fetchMusic)
+// router.route('/musicname').get( fetchMusicName)
+
+
 
 
 cloudinary.config({
