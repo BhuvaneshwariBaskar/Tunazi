@@ -23,7 +23,7 @@ const SwiperSlider = ({ musics, setCursong, fetchRecentlyPlayed }) => {
       modules={[Pagination, Autoplay]}
       className="mySwiper"
     >
-      {musics.map((music, index) => {
+      {musics.map((music) => {
         return (
           <>
             <SwiperSlide>

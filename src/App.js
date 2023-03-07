@@ -4,19 +4,22 @@ import "./app.css";
 import { useSelector } from "react-redux";
 
 // LOGIN & REGISTER
-import Register from "./pages/auth/register/Register";
-import Login from "./pages/auth/login/Login";
+
 import UserRoute from "./routes/User.route";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getHistory } from "./axios/user.axios";
 
 // Pages
+import Register from "./pages/auth/register/Register";
+import Login from "./pages/auth/login/Login";
 import Library from "./pages/library/Library";
 import Home from "./pages/Home/Home";
 import Search from "./pages/search/Search";
 import Favorites from "./pages/favorites/Favorites";
 import Trending from "./pages/trending/Trending";
+import Helo from "./pages/Hello";
+
 
 function App() {
   const { user } = useSelector((state) => ({ ...state }));
@@ -93,6 +96,10 @@ function App() {
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/library" element={<Library />} />
                 </Route>
+                <Route path="/" element={<UserRoute />}>
+                  <Route path="/Helo" element={<Helo />} />
+                </Route>
+                
               </>
             ) : (
               <>

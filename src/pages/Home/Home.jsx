@@ -17,13 +17,16 @@ const Home = ({ setCursong, recentlyPlayed, fetchRecentlyPlayed }) => {
     fetchRecentlyPlayed();
     fetchMusic(user.token).then((res) => {
       const data = res.data.filter((event) => event.year === 2022);
-      setTrendingSong(data.slice(3, 14));
+      setTrendingSong(data.slice(1, 8));
+     
     });
   }, []);
+  console.log(trendingSong)
 
   return (
     <section className="homesec">
       <div className="trending_img">
+      
         {trendingSong && trendingSong ? (
           <SwiperSlider
             fetchRecentlyPlayed={fetchRecentlyPlayed}

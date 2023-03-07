@@ -62,7 +62,7 @@
   color: #fff;
   margin-bottom: 2%;
 }
-.swipercontent h1:hover{
+.swipercontent h1:hover {
   text-decoration: underline;
 }
 .swipercontent p {
@@ -78,14 +78,14 @@
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 300;
- 
+
   border-style: solid;
-  border-color:  #782d8c;
+  border-color: #782d8c;
   color: #fff;
   background: none;
 }
-.btnplay:hover{
- background: #782d8c;
+.btnplay:hover {
+  background: #782d8c;
 }
 /* Media Query */
 @media only screen and (max-width: 1500px) {
@@ -98,7 +98,6 @@
   }
   .btnplay {
     margin: 2%;
-
   }
 }
 @media (max-width: 1300px) {
@@ -111,7 +110,7 @@
     line-height: 1.1rem;
   }
   .btnplay {
-    padding: 7px 30px;    
+    padding: 7px 30px;
   }
 }
 @media (max-width: 1100px) {
@@ -127,11 +126,10 @@
     height: 27vh;
   }
   .btnplay {
-    padding: 7px 30px;   
-    margin: 2% 4%; 
+    padding: 7px 30px;
+    margin: 2% 4%;
   }
   .swipercontent p {
-    margin:  0% 4%;
+    margin: 0% 4%;
   }
 }
-

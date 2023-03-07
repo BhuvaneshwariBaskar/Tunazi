@@ -88,6 +88,7 @@ const Search = ({ setCursong, setRecentlyPlayed }) => {
           setRecentlyPlayed={setRecentlyPlayed}
           setCursong={setCursong}
           user={user}
+          query={query}
         />
       )}
     </div>

@@ -30,3 +30,6 @@ export const getFav = async (user_id, token) =>
   await axios.get(`${base_url}/favorites/${user_id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
+  export const Hello= async()=>{
+    return await axios.get(`${base_url}/hi`)
+  }

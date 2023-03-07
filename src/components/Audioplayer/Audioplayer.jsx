@@ -22,7 +22,7 @@ const Audioplayer = ({ cursong, user }) => {
   };
   return (
     <>
-      <div className="imgname">
+      {/* <div className="imgname">
         <div className="imgcon">
           <img
             src={cursong && cursong.thumnail}
@@ -31,7 +31,7 @@ const Audioplayer = ({ cursong, user }) => {
           />
         </div>
         
-      </div>
+      </div> */}
       <AudioPlayer
         src={cursong && cursong.link}
         onPlay={handlePlay}

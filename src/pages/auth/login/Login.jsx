@@ -9,11 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate=useNavigate();
+
   const [mobileno, setMobileno] = useState("");
   const [password, setPassword] = useState("");
   const [IsAuthenticated, setIsAuthenticated] = useState(false);
 
-  const navigate=useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
