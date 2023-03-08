@@ -7,12 +7,12 @@
   justify-content: center;
   align-items: center;
 }
-.langcard:hover {
+/* .langcard:hover {
   width: 11vw;
   height: 29vh;
   background-color: rgb(36, 36, 36);
   transition: 0.3s all ease-in-out;
-}
+} */
 .flexgive {
   width: 90%;
   height: 90%;
@@ -55,4 +55,141 @@
 .Langname {
   font-size: 1.1rem;
   color: aliceblue;
+}
+
+@media screen and (max-width:1400px) {
+  .langcard {
+    width: 11.5vw;
+    height: 27vh;
+  }
+  .langimg img {
+    width: 10vw;
+    height: 17vh;
+  }
+  .lang{
+    margin-top: 1%;
+  }
+}
+@media screen and (max-width:1300px) {
+  .lang-grid-items {
+    grid-gap:4rem
+  }
+  .langcard {
+    width: 13.5vw;
+    height: 27vh;
+  }
+  .langimg img {
+    width: 11.5vw;
+    height: 17vh;
+  }
+  .lang{
+    margin-top: 15%;
+    margin-bottom: 14%;
+
+  }
+}
+@media screen and (max-width:1100px) {
+  .lang-grid-items {
+    grid-gap:4rem
+  }
+  .langcard {
+    width: 18.5vw;
+    height: 30vh;
+  }
+  .langimg img {
+    width: 16vw;
+    height: 20vh;
+  }
+  .lang{
+    margin-top: 18%;
+    margin-bottom: 16%;
+
+  }
+}
+@media screen and (max-width:900px) {
+  .lang-grid-items {
+    grid-gap:4rem
+  }
+  .langcard {
+    width: 18.5vw;
+    height: 27vh;
+  }
+  .langimg img {
+    width: 16vw;
+    height: 18vh;
+  }
+  .lang{
+    margin-top: 22%;
+    margin-bottom: 22%;
+
+  }
+}
+@media screen and (max-width:800px) {
+  .lang-grid-items {
+    grid-gap:1rem
+  }
+  .langcard {
+    width: 18.5vw;
+    height: 23vh;
+  }
+  .langimg img {
+    width: 16vw;
+    height: 18vh;
+  }
+  .lang{
+    margin-top: 23%;
+  }
+}
+@media screen and (max-width:700px) {
+  .lang-grid-items {
+    grid-gap:1rem
+  }
+  .langcard {
+    width: 24.5vw;
+    height: 24vh;
+  }
+  .langimg img {
+    width: 21vw;
+    height: 18vh;
+  }
+  .lang{
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+}
+@media screen and (max-width:600px) {
+  .lang-grid-items {
+    grid-gap:2rem
+  }
+  .langcard {
+    width: 24.5vw;
+    height: 26vh;
+  }
+  .langimg img {
+    width: 21vw;
+    height: 17vh;
+  }
+  .lang{
+    margin-bottom: 30%;
+    margin-top: 25%;
+  }
+}
+@media screen and (max-width:500px) {
+  .langcard {
+    width: 24.5vw;
+    height: 20vh;
+  }
+  .langimg img {
+    width: 21vw;
+    height: 17vh;
+  }
+  .lang-grid-items {
+    grid-gap:1rem
+  }
+  .Langname{
+    font-size: 0.8rem
+  }
+  .lang{
+    margin-bottom: 40%;
+  }
 }

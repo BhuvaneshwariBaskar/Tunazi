@@ -6,9 +6,12 @@ import { updateFavPost } from "../../axios/user.axios";
 import { useDispatch } from "react-redux";
 import "./Favcard.css";
 
-const Favcard = ({ music, user }) => {
+const Favcard = ({ music, fetchRecentlyPlayed, setCursong, user }) => {
   const dispatch = useDispatch();
-
+  const handleclick = (data) => {
+    setCursong(data);
+    fetchRecentlyPlayed();
+  };
   const addToFav = async (music_id) => {
     const favorites = JSON.parse(user.favorites)
       ? [music_id, ...JSON.parse(user.favorites)]
@@ -57,7 +60,10 @@ const Favcard = ({ music, user }) => {
             />
           )}
 
-          <AiFillPlayCircle className="fav-playbutton" />
+          <AiFillPlayCircle 
+            onClick={() => handleclick(music)}
+
+          className="fav-playbutton" />
         </div>
       </div>
     </section>

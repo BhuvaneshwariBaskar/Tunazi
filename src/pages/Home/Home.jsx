@@ -13,14 +13,15 @@ const Home = ({ setCursong, recentlyPlayed, fetchRecentlyPlayed }) => {
 	const { user } = useSelector((state) => ({ ...state }));
 	const [trendingSong, setTrendingSong] = useState(null);
 
-	useEffect(() => {
-		fetchRecentlyPlayed();
-		fetchMusic(user.token).then((res) => {
-			const data = res.data.filter((event) => event.year === 2022);
-			setTrendingSong(data.slice(1, 5));
-		});
-	}, []);
-	console.log(trendingSong);
+  useEffect(() => {
+    fetchRecentlyPlayed();
+    fetchMusic(user.token).then((res) => {
+      const data = res.data.filter((event) => event.year === 2022);
+      setTrendingSong(data.slice(2, 5));
+     
+    });
+  }, []);
+  console.log(trendingSong)
 
 	return (
 		<section className='homesec'>

@@ -18,7 +18,6 @@ import Home from "./pages/Home/Home";
 import Search from "./pages/search/Search";
 import Favorites from "./pages/favorites/Favorites";
 import Trending from "./pages/trending/Trending";
-import Helo from "./pages/Hello";
 
 
 function App() {
@@ -87,6 +86,7 @@ function App() {
                     path="/favorites"
                     element={
                       <Favorites
+                        fetchRecentlyPlayed={fetchRecentlyPlayed}
                         setCursong={setCursong}
                         setRecentlyPlayed={setRecentlyPlayed}
                       />
@@ -95,9 +95,6 @@ function App() {
                 </Route>
                 <Route path="/" element={<UserRoute />}>
                   <Route path="/library" element={<Library />} />
-                </Route>
-                <Route path="/" element={<UserRoute />}>
-                  <Route path="/Helo" element={<Helo />} />
                 </Route>
                 
               </>

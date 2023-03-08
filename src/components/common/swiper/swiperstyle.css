@@ -133,3 +133,24 @@
     margin: 0% 4%;
   }
 }
+@media (max-width: 700px) {
+  .swipercontent h1 {
+    font-size: 2rem;
+    margin: 2% 4%;
+  }
+  .swipercontent p {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+  .swipersec img {
+    width: 20vw;
+    height: 22vh;
+  }
+  .btnplay {
+    padding: 7px 30px;
+    margin: 2% 4%;
+  }
+  .swipercontent p {
+    margin: 0% 4%;
+  }
+}
