@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 // import apiClient from "../../spotify";
 
-export default function Sidebar() {
+export default function Sidebar({ isNavOpened }) {
 	const { user } = useSelector((state) => ({ ...state }));
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -39,7 +39,11 @@ export default function Sidebar() {
 		});
 	};
 	return (
-		<div className='sidebar-container'>
+		<div
+			className={`sidebar-container ${
+				window.innerWidth <= 640 ? (isNavOpened ? '' : 'hide') : ''
+			}`}
+		>
 			<label>
 				<input
 					type='file'

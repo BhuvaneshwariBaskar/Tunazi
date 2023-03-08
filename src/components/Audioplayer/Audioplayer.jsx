@@ -1,14 +1,14 @@
-import React from "react";
-import AudioPlayer from "react-h5-audio-player";
-import "./audioplayer.css";
-import { updateHistory } from "../../axios/user.axios";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import './audioplayer.css';
+import { updateHistory } from '../../axios/user.axios';
+import { useDispatch } from 'react-redux';
 
 // import { IoIosHeart } from 'react-icons/io';
 // import { IoMdHeartEmpty } from 'react-icons/io';
 
-const Audioplayer = ({ cursong, user }) => {
-  const dispatch = useDispatch();
+const Audioplayer = ({ cursong, user, isNavOpened }) => {
+	const dispatch = useDispatch();
 
   const handlePlay = async () => {
     const history = JSON.parse(user.history) ? JSON.parse(user.history) : [];
