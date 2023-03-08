@@ -1,0 +1,29 @@
+.audioNamediv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: aliceblue;
+    z-index: 10;
+}
+/* audio name */
+ .audiocon{
+  width:100%;
+ display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center; 
+}
+.imgname{
+  width:30%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+} 
+.cursongimage{
+  width:30%;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ } 

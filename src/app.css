@@ -18,6 +18,18 @@
   display: flex;
 }
 .audio-player {
+  /* width: 75%; */
   position: fixed !important;
   top: 0 !important;
+}
+.audio-name {
+  width: 25%;
+  /* position: fixed !important;
+  right: 0 !important; */
+}
+.audiodiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }

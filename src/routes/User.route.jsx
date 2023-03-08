@@ -7,6 +7,7 @@ import { useLocation, Outlet } from "react-router-dom";
 // import { validateUser } from "../axios/auth.axios";
 import Sidebar from "../components/sidebar/Sidebar";
 import Audioplayer from "../components/Audioplayer/Audioplayer";
+import AudioName from "../components/Audioplayer/Audioname";
 
 const UserRoute = ({ cursong }) => {
   const { user } = useSelector((state) => ({ ...state }));
@@ -23,7 +24,14 @@ const UserRoute = ({ cursong }) => {
         </div>
         <div className="outlet">
           <Outlet />
-          <Audioplayer className="audio-player" cursong={cursong} user={user} />
+          <div className="audiodiv">
+            <Audioplayer
+              className="audio-player"
+              cursong={cursong}
+              user={user}
+            />
+            {/* <AudioName className="audio-name" cursong={cursong} user={user} /> */}
+          </div>
         </div>
       </div>
     </>
