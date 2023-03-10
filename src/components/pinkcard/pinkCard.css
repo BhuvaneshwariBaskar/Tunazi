@@ -207,13 +207,13 @@
 }
 @media (max-width: 700px) {
   .card {
-    width: 68vw;
+    width: 73vw;
     height: 9vh;
   }
 }
 @media (max-width: 600px) {
   .card {
-    width: 63vw;
+    width: 69vw;
     height: 9vh;
   }
 }

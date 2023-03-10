@@ -75,10 +75,10 @@
 @media (max-width: 700px) {
   .trending_img {
     padding: 1rem;
-    width: 70%;
+    width: 65%;
   }
   .recently-played{
-    padding-top: 15rem;
+    padding-top: 14rem;
   }
 }
 @media (max-width: 600px) {

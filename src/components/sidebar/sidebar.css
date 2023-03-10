@@ -15,11 +15,17 @@
 }
 
 .sidebar-container.hide {
-	left: -100px;
+	left: -70px;
 }
 .profile-img {
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 40px;
 	margin-top: 60px;
+}
+@media screen and (max-width:640px) {
+	.sidebar-container {
+		width: 70px;
+		
+	}
 }
