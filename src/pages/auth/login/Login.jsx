@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import "./login.css";
 import Button from "../../../components/common/Button/Button";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -69,7 +69,7 @@ const Login = () => {
                 />
               </div>
               <p>
-                Don't have account?<a href="./register">Signup</a>
+                Don't have account?<Link href="./register">Signup</Link>
               </p>
               <Button type="submit">Login</Button>
             </form>

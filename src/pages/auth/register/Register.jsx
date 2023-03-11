@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import bg from '../../../assets/images/bglogin.jpg';
 import { register } from '../../../axios/auth.axios';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './register.css';
 import Button from '../../../components/common/Button/Button';
@@ -91,7 +91,7 @@ const Register = () => {
 								/>
 							</div>
 							<p>
-								Already have account? <a href='./login'>Signin</a>
+								Already have account? <Link href='./login'>Signin</Link>
 							</p>
 							<Button type='submit'>Submit</Button>
 						</form>
